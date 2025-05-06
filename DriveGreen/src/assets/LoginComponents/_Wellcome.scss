@@ -1,0 +1,63 @@
+
+#wellcome-card {
+    width: 390px;
+    height: 844px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+        img {
+            width: 184px;
+            height: 166px;
+        }
+
+        p {
+            font-family: Plus Jakarta Sans;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 100%;
+            color: #2c2c2c;
+            margin-top: 100px;
+        }
+
+        button {
+            width: 342px;
+            height: 48px;
+            border-radius: 8px;
+            background-color: #5ed48c;
+            border: none;
+            margin-top: 15px;
+        }
+
+        .link-to-login {
+            font-family: Plus Jakarta Sans;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 100%;
+            color: #FFFFFF;
+            text-decoration: none;
+            color: #2c2c2c;
+        }
+
+        h4 {
+            margin-top: 25px;
+            font-family: Plus Jakarta Sans;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 100%;
+            color: #2c2c2c;
+        }
+
+        .link-to-register {
+            margin-top: 25px;
+            font-family: Plus Jakarta Sans;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 100%;
+            text-decoration: none;
+            color: #5ed48c;;
+        }
+}
