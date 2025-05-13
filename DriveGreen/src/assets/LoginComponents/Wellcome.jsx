@@ -7,18 +7,23 @@ export function Wellcome() {
         <div id='wellcome-card'>
             <img src={logo} alt="logo" />
 
-            <p>Postojeci korisnik / novi korisnik</p>
+            <p>Kreiraj svoj nalog!</p>
 
             <button>
-                <Link 
-                to="/login" className='link-to-login'>
-                Prijavi se</Link>
+                <Link
+                    to="/register" className='link-to-register'
+               >Korisnik</Link>
+            </button>
+            <button className={'link-to-registerPartner-button'}>
+                <Link
+                    to="/registerPartner" className='link-to-registerPartner'>
+                    Partner</Link>
             </button>
 
-            <h4>Novi korisnik? &nbsp; 
-                <Link 
-                to="/register" className='link-to-register'
-                >Kreiraj svoj nalog!</Link>
+            <h4>Postojeci nalog? &nbsp;
+                <Link
+                    to="/login" className='link-to-login'
+                >Prijavi se!</Link>
             </h4>
 
         </div>
