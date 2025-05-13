@@ -4,6 +4,7 @@ import { Wellcome } from './LoginComponents/Wellcome';
 import { Login } from './LoginComponents/Login';
 import { Register } from './LoginComponents/Register';
 import { ForgotPasswordEmail } from './LoginComponents/ForgotPasswordEmail';
+import { RegisterPartner } from './LoginComponents/RegisterPartner';
 
 export function AppRoutes() {
   return (
@@ -12,7 +13,7 @@ export function AppRoutes() {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/forgot" element={<ForgotPasswordEmail />} />
+      <Route path="/registerPartner" element={<RegisterPartner />} />
     </Routes>
   );
 };
-

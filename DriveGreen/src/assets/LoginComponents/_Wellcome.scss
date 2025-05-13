@@ -20,6 +20,7 @@
             font-size: 16px;
             line-height: 100%;
             color: #2c2c2c;
+            opacity: 60%;
             margin-top: 100px;
         }
 
@@ -39,7 +40,7 @@
             line-height: 100%;
             color: #FFFFFF;
             text-decoration: none;
-            color: #2c2c2c;
+            color: #5ed48c;
         }
 
         h4 {
@@ -58,6 +59,25 @@
             font-size: 16px;
             line-height: 100%;
             text-decoration: none;
-            color: #5ed48c;;
+            color: #ffffff;;
         }
+    .link-to-registerPartner {
+        margin-top: 25px;
+        font-family: Plus Jakarta Sans;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        text-decoration: none;
+        color: #000000;;
+    }
+    .link-to-registerPartner-button {
+        width: 342px;
+        height: 48px;
+        border-radius: 8px;
+        background-color: #ffdb63;
+        border: none;
+        margin-top: 15px;
+    }
+
+
 }
