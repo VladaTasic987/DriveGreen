@@ -17,7 +17,7 @@ export function ForgotPasswordEmail() {
 
             <div className="forgot-title">
                 <h1>Zaboravljena lozinka?</h1>
-                <p>Unesite Vaš email radi verifikovanja, a mi ćemo Vam poslati verifikacioni kod</p>
+                <p>Unesite Vaš email radi verifikovanja,<br />a mi ćemo Vam poslati verifikacioni kod</p>
             </div>
 
             <div className="forgot-input-email">
@@ -31,7 +31,13 @@ export function ForgotPasswordEmail() {
                 </label>
             </div>
 
-            <button className="send-code">Pošalji kod</button>
+            <button className="send-code">
+                <Link
+                    className="link-send-code"
+                    to="/passwordCode">
+                    Pošalji kod
+                </Link>
+            </button>
         </div>
     )
 }
