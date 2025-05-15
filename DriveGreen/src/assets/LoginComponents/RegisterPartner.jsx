@@ -108,7 +108,7 @@ export function RegisterPartner() {
                 <span className={'checkbox-span'}>  &nbsp;Saglasan sam sa kupovinom i opštim uslovima poslovanja</span>
             </div>
 
-                <button>Registruj se</button>
+                <button className={'login-button'}>Registruj se</button>
                     <h4>Postojeći korisnik?
                         <a className="link-to-login" href="/login" data-discover="true">
                             &nbsp; Prijavi se!
