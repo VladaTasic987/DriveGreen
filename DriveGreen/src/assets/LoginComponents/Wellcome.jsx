@@ -9,7 +9,7 @@ export function Wellcome() {
 
             <p>Kreiraj svoj nalog!</p>
 
-            <button>
+            <button className='user-button'>
                 <Link
                     to="/register" className='link-to-register'
                >Korisnik</Link>
