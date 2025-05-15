@@ -165,6 +165,10 @@
         background-color: rgba(94, 212, 140, 0.5);
     }
 
+    .login-button:active {
+        background-color: rgba(56, 175, 102, 1);
+    }
+
     .login-google {
         display: flex;
         justify-content: center;
@@ -187,6 +191,11 @@
         border-radius: 8px;
         border: 2px solid rgba(66, 128, 239, 1);
         box-shadow: 0 0 0 4px rgba(66, 128, 239, 0.4); 
-        border-radius: 4px;
+        border-radius: 8px;
+    }
+
+    .login-google:active {
+        background-color: rgba(66, 128, 239, 0.2);
+        border: 2px solid rgba(66, 128, 239, 1);
     }
 }
