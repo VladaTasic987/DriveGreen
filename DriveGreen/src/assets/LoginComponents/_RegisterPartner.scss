@@ -202,10 +202,10 @@
     cursor: pointer;
   }
   .login-button:hover {
-    background-color: #e8be33;
+    background-color: rgba(255, 219, 99, 0.6);
   }
   .login-button:active {
-    background-color: #f5df95;
+    background-color: rgba(246, 192, 13, 1);
   }
   h4 {
     font-family: 'Plus Jakarta Sans';
@@ -246,7 +246,15 @@
   .login-google:active{
     background-color: rgba(66, 128, 239, 0.25);
   }
+//
+  .link-to-registerPartner-button:hover {
+    background-color: rgba(255, 219, 99, 0.6);
+  }
 
+  .link-to-registerPartner-button:active {
+    background-color: rgba(246, 192, 13, 1);
+  }
+  //
 
 
 
