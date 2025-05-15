@@ -86,6 +86,12 @@
         padding-left: 9px;
     }
 
+    .login-inputs-email input:hover {
+       border-radius: 8px;
+       border: 1px solid #00aef7;
+       background-color: rgba(0, 174, 247, 0.2);
+    }
+
     .login-inputs-password {
         margin-top: 20px;
         width: 100%;
@@ -120,7 +126,17 @@
         padding-left: 9px;
     }
 
-    h4 {
+    .login-inputs-password input:hover {
+       border-radius: 8px;
+       border: 1px solid #00aef7;
+       background-color: rgba(0, 174, 247, 0.2);
+    }
+
+    .link-to-forgot {
+        text-decoration: none;
+    }
+
+    .link-to-forgot h4 {
         font-family: Plus Jakarta Sans;
         font-weight: 600;
         font-size: 14px;
@@ -145,6 +161,10 @@
         cursor: pointer;
     }
 
+    .login-button:hover {
+        background-color: rgba(94, 212, 140, 0.5);
+    }
+
     .login-google {
         display: flex;
         justify-content: center;
@@ -161,5 +181,12 @@
         font-size: 16px;
         color: #4280ef;
         cursor: pointer;
+    }
+
+    .login-google:hover {
+        border-radius: 8px;
+        border: 2px solid rgba(66, 128, 239, 1);
+        box-shadow: 0 0 0 4px rgba(66, 128, 239, 0.4); 
+        border-radius: 4px;
     }
 }

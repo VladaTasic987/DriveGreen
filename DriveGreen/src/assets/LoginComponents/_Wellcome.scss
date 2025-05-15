@@ -31,6 +31,7 @@
             background-color: #5ed48c;
             border: none;
             margin-top: 15px;
+            cursor: pointer;
         }
 
         .link-to-login {
@@ -61,23 +62,25 @@
             text-decoration: none;
             color: #ffffff;;
         }
-    .link-to-registerPartner {
-        margin-top: 25px;
-        font-family: Plus Jakarta Sans;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 100%;
-        text-decoration: none;
-        color: #000000;;
-    }
-    .link-to-registerPartner-button {
-        width: 342px;
-        height: 48px;
-        border-radius: 8px;
-        background-color: #ffdb63;
-        border: none;
-        margin-top: 15px;
-    }
+
+        .link-to-registerPartner {
+            margin-top: 25px;
+            font-family: Plus Jakarta Sans;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 100%;
+            text-decoration: none;
+            color: #000000;;
+        }
+
+        .link-to-registerPartner-button {
+            width: 342px;
+            height: 48px;
+            border-radius: 8px;
+            background-color: #ffdb63;
+            border: none;
+            margin-top: 15px;
+        }
 
 
 }

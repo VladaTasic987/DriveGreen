@@ -29,7 +29,7 @@ return (
             placeholder='Upisite Vase ime i prezime...'
             />
         </label>
-    </div>
+    </div> 
 
     <div className='email-input'>
         <label htmlFor="">
@@ -53,7 +53,7 @@ return (
         </label>
     </div>
 
-    <button>Registruj se</button>
+    <button className='register-btn'>Registruj se</button>
 
 </div>
     )

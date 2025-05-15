@@ -48,8 +48,9 @@ export function Login() {
             </div>
 
             <Link
+                className='link-to-forgot'
                 to="/forgot">
-                <h4>Zaboravljena lozinka</h4>
+                <h4>Zaboravljena lozinka?</h4>
             </Link>
 
 
