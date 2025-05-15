@@ -109,10 +109,10 @@ export function RegisterPartner() {
             </div>
 
                 <button className={'login-button'}>Registruj se</button>
-                    <h4>Postojeći korisnik?
-                        <a className="link-to-login" href="/login" data-discover="true">
-                            &nbsp; Prijavi se!
-                       </a>
+                    <h4>Postojeći korisnik? &nbsp;
+                        <Link
+                            to="/login" className='link-to-login'
+                        >Prijavi se!</Link>
                     </h4>
 
             <button className={'login-google'}>
