@@ -14,7 +14,10 @@
         
         @import "../Layout/MapHeader.scss";
 
-        
+        .map-background {
+            width: 390px;
+            height: 738px;
+        }
 
         @import "../Layout/MapFooter.scss";
 
