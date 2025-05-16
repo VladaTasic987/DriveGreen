@@ -6,6 +6,7 @@ import { Register } from './LoginComponents/Register';
 import { ForgotPasswordEmail } from './LoginComponents/ForgotPasswordEmail';
 import { RegisterPartner } from './LoginComponents/RegisterPartner';
 import { ForgotCodePassword } from './LoginComponents/ForgotCodePassword';
+import { MapStart } from './MapComponents/MapStart';
 
 export function AppRoutes() {
   return (
@@ -16,6 +17,7 @@ export function AppRoutes() {
       <Route path="/forgot" element={<ForgotPasswordEmail />} />
       <Route path="/registerPartner" element={<RegisterPartner />} />
       <Route path="/passwordCode" element={<ForgotCodePassword />} />
+      <Route path="/mapStart" element={<MapStart />} />
     </Routes>
   );
 };

@@ -54,7 +54,11 @@ export function Login() {
             </Link>
 
 
-            <button className='login-button'>Prijavi se</button>
+            <button className='login-button'>
+                <Link
+                className='link-to-map'
+                to="/mapStart"
+                >Prijavi se</Link></button>
 
             <button className='login-google'>
                 <img
