@@ -1,4 +1,4 @@
-import chargerSmall from "../images/ChargerSmall.png"
+import chargerSmall from "../Images/ChargerSmall.png"
 
 export function PopUp (){
 
