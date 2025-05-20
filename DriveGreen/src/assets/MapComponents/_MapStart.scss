@@ -11,7 +11,7 @@
     position: relative;
 
 
-        
+
         @import "../Layout/MapHeader.scss";
 
         .map-background {
@@ -19,7 +19,56 @@
             height: 738px;
         }
 
-        @import "../Layout/MapFooter.scss";
+        .car-location {
+            position: absolute;
+            width: 130px;
+            height: 110px;
+            left: 279px;
+            top: 665px;
+        }
+        .charger-location {
+            position: absolute;
+            width: 136.98px;
+            height: 80.01px;
+            left: 76px;
+            top: 337px;
+        }
+
+
+        .charger-location-text{
+            font-family: Plus Jakarta Sans;
+            font-weight: 600;
+            font-size: 10px;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            row-gap: 0px ;
+            padding-right: 30px;
+            color: white;
+            position: absolute;
+            width: 133px;
+            height: 50px;
+            left: 76px;
+            top: 250px;
+            background-color: #5ed48c;
+            border-radius: 15px;
+        }
+    .charger-location-text img {
+
+        width: 7px;
+        height: 13px;
+    }
+    .first {
+        margin-bottom: -12px;
+    }
+
+
+
+    @import "../Layout/MapFooter.scss";
 
         
 }
+
+
+
+@import "../Layout/PopUp";

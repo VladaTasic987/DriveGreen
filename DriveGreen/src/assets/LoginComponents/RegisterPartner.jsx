@@ -23,11 +23,11 @@ export function RegisterPartner() {
 
             <div className='name-input'>
                 <label htmlFor="">
-                    Ime i prezime
+                    Vaše ime / ime Kompanije
                     <br />
                     <input
                         type="text"
-                        placeholder='Upišite Vaše ime i prezime...'
+                        placeholder='Upišite Vaše ime ili ime Kompanije...'
                     />
                 </label>
             </div>
