@@ -1,5 +1,6 @@
 import chargerSmall from "../Images/ChargerSmall.png"
 import wifiLogo from "../Images/WifiLogo.png"
+import { Link } from "react-router-dom";
 
 export function PopUp({ showPopup }) {
 
