@@ -1,7 +1,9 @@
 import chargerSmall from "../Images/ChargerSmall.png"
-import { Link } from "react-router-dom"
+import wifiLogo from "../Images/WifiLogo.png"
 
-export function PopUp() {
+export function PopUp({ showPopup }) {
+
+    if (!showPopup) { return null }
 
     return <div id="PopUp">
         <img className={'charger-img'} src={chargerSmall} alt="" />
@@ -15,7 +17,7 @@ export function PopUp() {
             </div>
             <div className="popUp-bottom">
                 <div className="power">
-                    <span className="wifi-icon">📶</span>
+                    <span className="wifi-icon"><img src={wifiLogo} alt="wifilogo" /></span>
                     <span>150 KW</span>
                 </div>
                 <button className="popUp-btn">
