@@ -6,13 +6,14 @@
   width: 375px;
   height: 147px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  position: relative;
-  top: -400px;
+  position: absolute;
+  top: 350px;
+  left: 667px;
 
 .charger-img {
   margin: 10px;
-  width: 85px;
-  height: 95px;
+  width: 100px;
+  height: 120px;
 }
 
 .popUp-content {
@@ -34,7 +35,7 @@
 }
 
 .popUp-info {
-  margin-left: 188px;
+  margin-left: 160px;
   width: 70px;
   display: flex;
   //clear: both;
@@ -47,6 +48,7 @@
   justify-content: flex-end;
   align-items: flex-end;
 }
+
 
 .stars {
   color: #ffdb63;
@@ -68,14 +70,16 @@
   font-size: 12px;
 }
 
-.wifi-icon {
-  font-size: 12px;
+.wifi-icon img{
+  width: 20px;
+  height: 20px;
+
 }
 
 .popUp-btn {
   margin-right: 15px;
-  width: 90px;
-  height: 15px;
+  width: 110px;
+  height: 20px;
   background-color: #5ed48c;
   font-weight: 400;
   font-size: 10px;
