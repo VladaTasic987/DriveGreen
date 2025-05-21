@@ -20,8 +20,6 @@ export function MapStart() {
         setShowPopup(false);
     }
     return (
-        <div>
-
         <div id="map-start-container">
 
             <MapHeader/>
@@ -50,10 +48,9 @@ export function MapStart() {
                 src={carLocation}
                 alt="car" />
             <MapFooter/>
+            {showPopup ? <PopUp showPopup={showPopup}/> : null}
             
         </div>
-            {showPopup ? <PopUp showPopup={showPopup}/> : null}
 
-        </div>
     )
 }
