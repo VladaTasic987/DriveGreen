@@ -23,6 +23,7 @@ export function PopUp({ showPopup }) {
                 </div>
                 <button className="popUp-btn">
                     <Link
+                        className="popUp-btn-link"
                         to="/viewMore"
                     >
                         Prikaži više
