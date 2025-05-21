@@ -3,8 +3,15 @@ import location from "../Images/Location.png"
 import mapUser from "../Images/MapUser.png"
 import arrowDown from "../Images/ArrowDown.png"
 import { UserPopup } from "./UserPopup"
+import { useState } from "react"
 
 export function MapHeader() {
+
+    const [visible, setVisible] = useState(false);
+
+    function SeeUserInfo() {
+        setVisible(prevVisible => !prevVisible)
+    }
 
     const MapHeaderElements = {
         logo: headerLogo,
@@ -32,6 +39,7 @@ export function MapHeader() {
                 <img 
                 className="header-user-img"
                 src={MapHeaderElements.user} 
+                onClick={SeeUserInfo}
                 alt="map-user" 
                 />
                 <img 
@@ -49,7 +57,7 @@ export function MapHeader() {
 
                 </div>
 
-                <UserPopup/>
+                {visible ? <UserPopup/> : null}
             </div>
 
     )
