@@ -8,6 +8,7 @@ import blackThunder from "../Images/BlackThunder.png"
 import locationSmall from "../Images/LocationSmall.png"
 import {useState} from "react";
 
+
 export function MapStart() {
 
     const [showPopup, setShowPopup] = useState(false);
@@ -49,6 +50,7 @@ export function MapStart() {
                 alt="car" />
             <MapFooter/>
             {showPopup ? <PopUp showPopup={showPopup}/> : null}
+            
             
         </div>
 

@@ -2,7 +2,7 @@ import headerLogo from "../Images/HeaderLogo.png"
 import location from "../Images/Location.png"
 import mapUser from "../Images/MapUser.png"
 import arrowDown from "../Images/ArrowDown.png"
-
+import { UserPopup } from "./UserPopup"
 
 export function MapHeader() {
 
@@ -48,6 +48,8 @@ export function MapHeader() {
                 alt="map-down" />
 
                 </div>
+
+                <UserPopup/>
             </div>
 
     )
