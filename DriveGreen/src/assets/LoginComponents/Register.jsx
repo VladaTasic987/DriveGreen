@@ -53,7 +53,13 @@ return (
         </label>
     </div>
 
-    <button className='register-btn'>Registruj se</button>
+    <button className='register-btn'>
+        <Link 
+        to="/MapStart"
+        className='link-to-map'
+        >Registruj se</Link>
+        
+    </button>
 
 </div>
     )

@@ -108,7 +108,11 @@ export function RegisterPartner() {
                 <span className={'checkbox-span'}>  &nbsp;Saglasan sam sa kupovinom i opštim uslovima poslovanja</span>
             </div>
 
-                <button className={'login-button'}>Registruj se</button>
+                <button className={'login-button'}> 
+                <Link 
+                to="/mapStart"
+                className="link-to-map">Registruj se</Link>    
+                </button>
                     <h4>Postojeći korisnik? &nbsp;
                         <Link
                             to="/login" className='link-to-login'
