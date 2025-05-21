@@ -5,88 +5,88 @@
   border-radius: 15px;
   width: 375px;
   height: 147px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   position: relative;
   top: -400px;
 
-.charger-img {
-  margin: 10px;
-  width: 85px;
-  height: 95px;
-}
+  .charger-img {
+    margin: 10px;
+    width: 85px;
+    height: 95px;
+  }
 
-.popUp-content {
-  width: 100%;
-}
+  .popUp-content {
+    width: 100%;
+  }
 
-.popUp-title {
-  margin-top: 10px;
-  color: #ffdb63;
-  font-weight: 600;
-  font-size: 14px;
-}
+  .popUp-title {
+    margin-top: 10px;
+    color: #ffdb63;
+    font-weight: 600;
+    font-size: 14px;
+  }
 
-.popUp-address {
-  margin-top: 10px;
-  color: #333;
-  font-weight: 400;
-  font-size: 12px;
-}
+  .popUp-address {
+    margin-top: 10px;
+    color: #333;
+    font-weight: 400;
+    font-size: 12px;
+  }
 
-.popUp-info {
-  margin-left: 188px;
-  width: 70px;
-  display: flex;
-  //clear: both;
-  color: #ffdb63;
-  font-weight: 400;
-  font-size: 10px;
-  justify-items: end;
-  flex-direction: column;
-  align-content: flex-end;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
+  .popUp-info {
+    margin-left: 188px;
+    width: 70px;
+    display: flex;
+    //clear: both;
+    color: #ffdb63;
+    font-weight: 400;
+    font-size: 10px;
+    justify-items: end;
+    flex-direction: column;
+    align-content: flex-end;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
 
-.stars {
-  color: #ffdb63;
-  font-size: 12px;
-}
+  .stars {
+    color: #ffdb63;
+    font-size: 12px;
+  }
 
-.popUp-bottom {
-  display: flex;
-  justify-content: space-between;
-  //clear: both;
-}
+  .popUp-bottom {
+    display: flex;
+    justify-content: space-between;
+    //clear: both;
+  }
 
-.power {
+  .power {
 
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-  font-weight: 400;
-  font-size: 12px;
-}
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 12px;
+  }
 
-.wifi-icon {
-  font-size: 12px;
-}
+  .wifi-icon {
+    font-size: 12px;
+  }
 
-.popUp-btn {
-  margin-right: 15px;
-  width: 90px;
-  height: 15px;
-  background-color: #5ed48c;
-  font-weight: 400;
-  font-size: 10px;
-  border: none;
-  border-radius: 20px;
-  color: white;
-  cursor: pointer;
-  transition: background 0.3s;
-}
+  .popUp-btn {
+    margin-right: 15px;
+    width: 90px;
+    height: 15px;
+    background-color: #5ed48c;
+    font-weight: 400;
+    font-size: 10px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
 
-.btn:hover {
-  background-color: #5ed48c;
-}
+  .btn:hover {
+    background-color: #5ed48c;
+  }
 }
