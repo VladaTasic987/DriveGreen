@@ -8,7 +8,7 @@ export function ForgotPasswordEmail() {
             <div className="forgot-password-header">
                 <img src={arrowBack} alt='arrow-back' />
                 <Link
-                    to="/"
+                    to="/login"
                     className='link-to-welcome'
                 >
                     Nazad

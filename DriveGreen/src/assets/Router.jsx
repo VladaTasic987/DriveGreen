@@ -7,6 +7,7 @@ import { ForgotPasswordEmail } from './LoginComponents/ForgotPasswordEmail';
 import { RegisterPartner } from './LoginComponents/RegisterPartner';
 import { ForgotCodePassword } from './LoginComponents/ForgotCodePassword';
 import { MapStart } from './MapComponents/MapStart';
+import { ViewMoreCard } from './MapComponents/ViewMoreCard';
 
 export function AppRoutes() {
   return (
@@ -18,6 +19,7 @@ export function AppRoutes() {
       <Route path="/registerPartner" element={<RegisterPartner />} />
       <Route path="/passwordCode" element={<ForgotCodePassword />} />
       <Route path="/mapStart" element={<MapStart />} />
+      <Route path="/viewMore" element={<ViewMoreCard />} />
     </Routes>
   );
 };
