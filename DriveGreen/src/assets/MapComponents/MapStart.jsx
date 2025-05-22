@@ -13,12 +13,17 @@ import { MapBackground } from "../Layout/MapBackground.jsx"
 export function MapStart() {
 
     const [showPopup, setShowPopup] = useState(false);
+    const [showDetails, setShowDetails] = useState(false);
 
     function OnShowPopUp(e) {
         e.preventDefault();
         setShowPopup( newPopup => !newPopup);
     }
-   
+    function OnShowDetails(e) {
+        e.preventDefault();
+        setShowDetails( newDetails => !newDetails);
+    }
+
     return (
         <div id="map-start-container">
 
@@ -31,19 +36,22 @@ export function MapStart() {
                 src={mapBackground}
                 alt="background"
                 onClick={onClosePopUp} /> */}
-            <button className={'popup-button'} onClick={OnShowPopUp}>
+            { showDetails ?
+                <button className={'popup-button'} onClick={OnShowPopUp}>
                 <span className={'charger-location-text'}>
 
                     <div className={'first'}> Robert Bosch</div>
                     <div> <img src={locationSmall} alt="location" /> 2,5 km / 5 min</div>
 
-
                 </span>
-            </button>
+                </button>
+                : null}
+            <button className={'popup-button'} onClick={OnShowDetails}>
             <img
-                className="charger-location"
+                className="charger-location pulse"
                 src={blackThunder}
                 alt="charger" />
+            </button>
 
             <img
                 className={'car-location'}
