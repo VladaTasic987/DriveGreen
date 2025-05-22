@@ -76,7 +76,12 @@ export function ViewMoreCard() {
                 </div>
             </div>
 
-            <button className="reserve-button">REZERVIŠI PUNJAČ</button>
+            <button className="reserve-button">
+                <Link
+                    className="link-to-reserved"
+                    to="/reservedCharger"
+                >REZERVIŠI PUNJAČ</Link>
+            </button>
 
             <MapFooter />
         </div>

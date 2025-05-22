@@ -1,0 +1,163 @@
+#reserved-container {
+    width: 390px;
+    min-height: 844px;
+    border-radius: 20px;
+    background-color: #F8F8F8B2;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    @import "../Layout/MapHeader";
+    @import "../Layout/MapFooter";
+
+    .background {
+        width: 337.53px;
+        height: 538.15px;
+        position: absolute;
+        top: 110px;
+        left: 29px;
+        z-index: 0;
+    }
+
+    .icon {
+        width: 64.71px;
+        height: 61.45px;
+        position: absolute;
+        top: 123px;
+        left: 166px;
+        z-index: 1;
+    }
+
+    .top-div {
+        font-family: "Poppins", sans-serif;
+        z-index: 1;
+        width: 227px;
+        height: 41px;
+        background-color: #fff;
+        position: absolute;
+        top: 196px;
+        left: 86px;
+    }
+
+    .top-div h1 {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 100%;
+        text-align: center;
+        margin-bottom: 7px;
+    }
+
+    .top-div p {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 100%;
+        text-align: center;
+        color: #8A8A8A;
+    }
+
+    .dotted-line {
+        width: 255.07px;
+        height: 0.83px;
+        top: 247px;
+        left: 69px;
+        position: absolute;
+    }
+
+    .middle-div {
+        font-family: "Poppins", sans-serif;
+        z-index: 1;
+        width: 225px;
+        background-color: white;
+        position: absolute;
+        top: 282px;
+        left: 73px;
+    }
+
+    .middle-div h1 {
+        font-weight: 700;
+        font-size: 11px;
+        line-height: 100%;
+        color: #8A8A8A;
+    }
+
+    .middle-first p {
+        color: #FFC801;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 100%;
+        margin-bottom: 14.58px;
+
+    }
+
+    .middle-second p {
+        font-family: "Amiko", sans-serif;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 100%;
+        color: #2C2D30;
+        margin-bottom: 13.34px;
+    }
+
+    .middle-third p {
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 100%;
+        color: #2C2D30;
+        margin-bottom: 8.53px;
+    }
+
+    .middle-fourth p {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 100%;
+        color: #5ED48C;
+        margin-top: 5px;
+    }
+
+    .buttons-div {
+        font-family: "Poppins", sans-serif;
+        position: absolute;
+        z-index: 1;
+        bottom: 268px;
+        left: 61px;
+    }
+
+    .button-one {
+        width: 271px;
+        height: 40px;
+        border-radius: 24px;
+        margin-bottom: 10px;
+        border: none;
+        background-color: #5ED48C;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        color: white;
+        cursor: pointer;
+    }
+
+    .button-one:hover {
+        background-color: rgba(94, 212, 140, 0.5);
+    }
+
+    .button-two {
+        width: 271px;
+        height: 40px;
+        border-radius: 24px;
+        border: none;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        background-color: #E6EAEA;
+        cursor: pointer;
+    }
+
+    .button-two-link {
+        text-decoration: none;
+        color: white;
+    }
+}
