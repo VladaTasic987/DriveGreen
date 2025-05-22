@@ -7,6 +7,7 @@ import carLocation from "../Images/CarLocation.png"
 import blackThunder from "../Images/BlackThunder.png"
 import locationSmall from "../Images/LocationSmall.png"
 import {useState} from "react";
+import { MapBackground } from "../Layout/MapBackground.jsx"
 
 
 export function MapStart() {
@@ -15,21 +16,21 @@ export function MapStart() {
 
     function OnShowPopUp(e) {
         e.preventDefault();
-        setShowPopup(true);
+        setShowPopup( newPopup => !newPopup);
     }
-    function onClosePopUp() {
-        setShowPopup(false);
-    }
+   
     return (
         <div id="map-start-container">
 
             <MapHeader />
 
-            <img
+
+            <MapBackground className="map-background"/>
+            {/* <img
                 className="map-background"
                 src={mapBackground}
                 alt="background"
-                onClick={onClosePopUp} />
+                onClick={onClosePopUp} /> */}
             <button className={'popup-button'} onClick={OnShowPopUp}>
                 <span className={'charger-location-text'}>
 
