@@ -30,7 +30,7 @@ export function MapBackground() {
         if (checkContainer() && !mapInstance.current) {
           initializeMap();
         }
-      }, 100);
+      }, 100); 
 
       return () => clearTimeout(timer);
     } else if (!mapInstance.current) {
