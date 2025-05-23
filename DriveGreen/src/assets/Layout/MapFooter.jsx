@@ -16,20 +16,9 @@ export function MapFooter() {
         manual: "Uputstvo za koriscenje",
     }
 
-    
         const location = useLocation();
   
             
-                //<div>
-                   // {location.pathname === '/home' ? (
-                   // <HomeComponent />
-                    //    ) : (
-                    //<DefaultComponent />
-                     //   )}
-               // </div>
- 
-
-
     return (
         <div id="map-footer">
             

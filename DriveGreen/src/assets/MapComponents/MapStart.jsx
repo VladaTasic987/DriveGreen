@@ -29,7 +29,7 @@ export function MapStart() {
 
             <MapHeader />
 
-
+            <div className="map-middle">
             <MapBackground className="map-background"/>
             {/* <img
                 className="map-background"
@@ -57,10 +57,11 @@ export function MapStart() {
                 className={'car-location'}
                 src={carLocation}
                 alt="car" />
+            
             <MapFooter/>
             {showPopup ? <PopUp showPopup={showPopup}/> : null}
             
-            
+            </div>
         </div>
 
     )

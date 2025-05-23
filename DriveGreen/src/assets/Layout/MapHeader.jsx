@@ -13,46 +13,39 @@ export function MapHeader() {
         setVisible(prevVisible => !prevVisible)
     }
 
-    const MapHeaderElements = {
-        logo: headerLogo,
-        location: location,
-        user: mapUser,
-        down: arrowDown,
-        language: "SR",
-    }
 
     return (
 
             <div id="map-header">
 
                 <div className="header-left">
-                <img src={MapHeaderElements.logo} alt="map-logo" />
+                <img src={headerLogo} alt="map-logo" />
                 </div>
 
                 <div className="header-right">
 
                 <img 
                 className="header-location-img"
-                src={MapHeaderElements.location} 
+                src={location} 
                 alt="map-location" 
                 />
                 <img 
                 className="header-user-img"
-                src={MapHeaderElements.user} 
+                src={mapUser} 
                 onClick={SeeUserInfo}
                 alt="map-user" 
                 />
                 <img 
                 className="header-user-down-img"
-                src={MapHeaderElements.down} 
+                src={arrowDown} 
                 alt="map-down" 
                 />
                 <p
                 className="language-text"
-                >{MapHeaderElements.language}</p>
+                >SR</p>
                 <img
                 className="header-down-img-again" 
-                src={MapHeaderElements.down} 
+                src={arrowDown} 
                 alt="map-down" />
 
                 </div>
