@@ -4,11 +4,32 @@ import CoungratulationBackground from "../Images/CongratulationBackground.png"
 import ReservedIcon from "../Images/ReservedIcon.png"
 import DottedLine from "../Images/DottedLine.png"
 import { Link } from "react-router-dom";
+import { useRef, useState } from "react";
+import MapBackground from "../Layout/MapBackground";
+
+
 
 export function ReservedCharger() {
+  const [visible, setVisible] = useState(true);
+
+  
+
+  const mapRef = useRef();
+
+  function handleDrawRoute() {
+    if (mapRef.current) {
+      mapRef.current.drawRandomRoute();
+    } else {
+      console.warn("MapBackground nije učitan ili mapRef nije postavljen.");
+    }
+    setVisible(newVisible => !newVisible)
+  };
+
     return (
         <div id="reserved-container">
             <MapHeader />
+            
+            <div style={{ display: visible ? 'block' : 'none' }}>
             <img src={ReservedIcon} alt="icon reserved" className="icon" />
             <img src={CoungratulationBackground} alt="background image" className="background" />
             <div className="top-div">
@@ -41,7 +62,10 @@ export function ReservedCharger() {
             </div>
 
             <div className="buttons-div">
-                <button className="button-one">prikaži rutu</button>
+                <button 
+                onClick={handleDrawRoute}
+                className="button-one"
+                >prikaži rutu</button>
                 <button className="button-two">
                     <Link
                         className="button-two-link"
@@ -49,6 +73,8 @@ export function ReservedCharger() {
                     >otkaži rezervaciju</Link>
                 </button>
             </div>
+            </div>  
+            <MapBackground ref={mapRef} style={{ display: visible ? 'none' : 'block' }}/>
             <MapFooter />
         </div>
     )

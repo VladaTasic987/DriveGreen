@@ -5,6 +5,7 @@ import arrowDown from "../Images/ArrowDown.png"
 import { UserPopup } from "./UserPopup"
 import { useState } from "react"
 
+
 export function MapHeader() {
 
     const [visible, setVisible] = useState(false);
@@ -21,7 +22,7 @@ export function MapHeader() {
                 <div className="header-left">
                 <img src={headerLogo} alt="map-logo" />
                 </div>
-
+                
                 <div className="header-right">
 
                 <img 
@@ -49,6 +50,8 @@ export function MapHeader() {
                 alt="map-down" />
 
                 </div>
+
+                 
 
                 {visible ? <UserPopup/> : null}
             </div>

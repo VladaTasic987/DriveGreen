@@ -4,11 +4,16 @@
     border-radius: 20px;
     background-color: #F8F8F8B2;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     position: relative;
+    z-index: 1;
 
     @import "../Layout/MapHeader";
+    @import "../Layout/MapBackground";
     @import "../Layout/MapFooter";
+    
 
     .background {
         width: 337.53px;
@@ -16,7 +21,7 @@
         position: absolute;
         top: 110px;
         left: 29px;
-        z-index: 0;
+        z-index: 1;
     }
 
     .icon {
@@ -25,7 +30,7 @@
         position: absolute;
         top: 123px;
         left: 166px;
-        z-index: 1;
+        z-index: 2;
     }
 
     .top-div {
