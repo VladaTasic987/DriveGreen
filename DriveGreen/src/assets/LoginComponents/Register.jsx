@@ -61,7 +61,7 @@ return (
         </label>
 
 
-        {!visible ? <img
+        {visible ? <img
         onClick={toggleVisible}
         className='not-vision' 
         src={notVision} 
