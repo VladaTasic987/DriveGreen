@@ -53,7 +53,7 @@ return (
             Lozinka
             <br />
             <input 
-            type={visible ? "password" : "text"}
+            type={visible ? "text" : "password"}
             placeholder='Upisite Vasu lozinku...'
             />
 
@@ -61,7 +61,7 @@ return (
         </label>
 
 
-        {visible ? <img
+        {!visible ? <img
         onClick={toggleVisible}
         className='not-vision' 
         src={notVision} 
