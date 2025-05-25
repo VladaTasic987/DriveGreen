@@ -6,7 +6,6 @@ import googleIcon from '../Images/GoogleIcon.png'
 export function Register() {
 
 
-    
 
 return (
 

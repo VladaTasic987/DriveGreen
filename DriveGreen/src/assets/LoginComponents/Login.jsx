@@ -2,8 +2,15 @@ import { Link } from 'react-router-dom';
 import arrowBack from '../Images/ArrowBack.png';
 import googleIcon from '../Images/GoogleIcon.png';
 import notVision from '../Images/NotVision.png';
+import { useUser } from '../Context';
 
 export function Login() {
+
+    
+
+    const { user } = useUser();
+
+    console.log(user);
 
     return (
         <div id='login-card'>
