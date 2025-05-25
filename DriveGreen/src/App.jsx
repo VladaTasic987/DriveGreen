@@ -7,9 +7,11 @@ import { AppRoutes } from './assets/Router';
 function App() {
   
   return (
+    
     <BrowserRouter>
       <AppRoutes />
     </BrowserRouter>
+    
   )
 }
 

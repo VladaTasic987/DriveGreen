@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import arrowBack from '../Images/ArrowBack.png';
 import googleIcon from '../Images/GoogleIcon.png';
+import notVision from '../Images/NotVision.png';
 
 export function Login() {
 
@@ -44,6 +45,10 @@ export function Login() {
                         type="password"
                         placeholder='Vaša lozinka'
                     />
+                    <img 
+                    className='not-vision'
+                    src={notVision} 
+                    alt="eye" />
                 </label>
             </div>
 
@@ -54,11 +59,19 @@ export function Login() {
             </Link>
 
 
-            <button className='login-button'>
-                <Link
-                className='link-to-map'
-                to="/mapStart"
-                >Prijavi se</Link></button>
+            <Link
+            className='link-to-map'
+            to="/mapStart"
+            >Prijavi se
+            </Link>
+
+            <h4 className='new-user'>Novi Korisnik? 
+                <Link 
+                to="/register"
+                className='link-to-register'>
+                Kreiraj svoj nalog!
+                </Link>
+            </h4>
 
             <button className='login-google'>
                 <img

@@ -58,7 +58,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
     }
+
+    
 
     .login-inputs-email label {
         font-family: Plus Jakarta Sans;
@@ -75,6 +78,12 @@
         background-color: #f5f5f5;
         border: 1px solid #f5f5f5;
         margin-top: 12px;
+        font-family: Plus Jakarta Sans;
+        font-weight: 500;
+        font-size: 16px;
+        font-style: italic;
+        color: rgba(44, 44, 44, 1);
+        padding-left: 10px;
     }
 
     .login-inputs-email input::placeholder {
@@ -84,6 +93,9 @@
         color: #2c2c2c;
         line-height: 100%;
         padding-left: 9px;
+        position: absolute;
+        top: 12px;
+        left: 1px;
     }
 
     .login-inputs-email input:hover {
@@ -98,6 +110,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
+    }
+
+    .not-vision  {
+        position: absolute;
+        bottom: 15px;
+        right: 35px;
     }
 
     .login-inputs-password label {
@@ -115,6 +134,12 @@
         background-color: #f5f5f5;
         border: 1px solid #f5f5f5;
         margin-top: 12px;
+        font-family: Plus Jakarta Sans;
+        font-weight: 500;
+        font-size: 16px;
+        font-style: italic;
+        color: rgba(44, 44, 44, 1);
+        padding-left: 10px;
     }
 
     .login-inputs-password input::placeholder {
@@ -124,6 +149,9 @@
         color: #2c2c2c;
         line-height: 100%;
         padding-left: 9px;
+        position: absolute;
+        top: 12px;
+        left: 1px;
     }
 
     .login-inputs-password input:hover {
@@ -147,7 +175,8 @@
         margin-left: 165px;
     }
 
-    .login-button {
+    
+    .link-to-map {
         height: 48px;
         width: 342px;
         border-radius: 8px;
@@ -159,16 +188,28 @@
         line-height: 100%;
         color: #ffffff;
         cursor: pointer;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .link-to-map {
-        text-decoration: none;
+    .new-user {
         font-family: Plus Jakarta Sans;
         font-weight: 600;
         font-size: 16px;
         line-height: 100%;
-        color: #ffffff;
-        cursor: pointer;
+        color: rgba(44, 44, 44, 1);
+        margin-top: 10px;
+    }
+
+    .link-to-register {
+        margin-left: 3px;
+        font-family: Plus Jakarta Sans;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        color: rgba(52, 163, 83, 1);
     }
 
     .login-button:hover {

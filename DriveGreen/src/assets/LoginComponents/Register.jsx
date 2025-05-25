@@ -1,7 +1,12 @@
 import arrowBack from '../Images/ArrowBack.png';
 import { Link } from 'react-router-dom';
+import notVision from '../Images/NotVision.png';
+import googleIcon from '../Images/GoogleIcon.png'
 
 export function Register() {
+
+
+    
 
 return (
 
@@ -47,19 +52,52 @@ return (
             Lozinka
             <br />
             <input 
-            type="text"
+            type="password"
             placeholder='Upisite Vasu lozinku...'
             />
+
+            
         </label>
+
+
+        <img
+        className='not-vision' 
+        src={notVision} 
+        alt="eye" />
     </div>
 
-    <button className='register-btn'>
+    <div className='agree-container'>
+    <input 
+            type="checkbox" 
+            className='check-box'
+            />
+    <p className='agree-text'>Saglasan sam sa politikom i opstim uslovima poslovanja</p>
+    </div>
+
+
+    
         <Link 
         to="/MapStart"
         className='link-to-map'
         >Registruj se</Link>
+
+        <h4 className='existing-user'>Postojeci korisnik? 
+        <Link
+        to="/Login"
+        className='link-to-login'
+        >Prijavi se!</Link> 
+        </h4>
+
+        <button 
+        className='register-google'
+        >
+            <img
+                src={googleIcon}
+                alt="googleicon" />
+                Koristi Google nalog
+        </button>
         
-    </button>
+    
 
 </div>
     )

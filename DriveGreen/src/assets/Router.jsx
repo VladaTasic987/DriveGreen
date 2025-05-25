@@ -9,6 +9,7 @@ import { ForgotCodePassword } from './LoginComponents/ForgotCodePassword';
 import { MapStart } from './MapComponents/MapStart';
 import { ViewMoreCard } from './MapComponents/ViewMoreCard';
 import { ReservedCharger } from './MapComponents/ReservedCharger';
+import { LoginContainer } from './Containers/LoginContainer';
 
 export function AppRoutes() {
   return (
@@ -22,6 +23,7 @@ export function AppRoutes() {
       <Route path="/mapStart" element={<MapStart />} />
       <Route path="/viewMore" element={<ViewMoreCard />} />
       <Route path="/reservedCharger" element={<ReservedCharger />} />
+      <Route path="/Container" element={<LoginContainer />} />
     </Routes>
   );
 };
