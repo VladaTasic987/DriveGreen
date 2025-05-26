@@ -59,7 +59,7 @@ export const MapBackground = forwardRef((props, ref) => {
         source: vectorSource,
         style: new Style({
           stroke: new Stroke({
-            color: '#ff0000',
+            color: '#465B4E', // Changed line color here
             width: 3
           })
         })

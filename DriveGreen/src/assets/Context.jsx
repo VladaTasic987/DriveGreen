@@ -3,10 +3,14 @@ import { createContext, useContext, useState } from "react";
 const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
-  const [user, setUser] = useState({ name: 'John Doe' });
+  const [visible, setVisible] = useState(false);
+
+  function toggleVisible() {
+    setVisible(Toggle => !Toggle);
+  }
 
   return (
-    <UserContext.Provider value={{ user, setUser }}>
+    <UserContext.Provider value={{ visible, toggleVisible }}>
       {children}
     </UserContext.Provider>
   );

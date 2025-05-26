@@ -2,15 +2,12 @@ import { Link } from 'react-router-dom';
 import arrowBack from '../Images/ArrowBack.png';
 import googleIcon from '../Images/GoogleIcon.png';
 import notVision from '../Images/NotVision.png';
+import vision from '../Images/Vision.png';
 import { useUser } from '../Context';
 
 export function Login() {
 
-    
-
-    const { user } = useUser();
-
-    console.log(user);
+const { visible, toggleVisible } = useUser();
 
     return (
         <div id='login-card'>
@@ -49,13 +46,20 @@ export function Login() {
                     Lozinka
                     <br />
                     <input
-                        type="password"
+                        type={visible ? "text" : "password"}
                         placeholder='Vaša lozinka'
                     />
-                    <img 
+                   {!visible ? <img 
+                    onClick={toggleVisible}
                     className='not-vision'
                     src={notVision} 
                     alt="eye" />
+                    :
+                    <img 
+                    onClick={toggleVisible}
+                    className='not-vision'
+                    src={vision} 
+                    alt="eye" /> }
                 </label>
             </div>
 
