@@ -23,7 +23,7 @@ return (
 
     <div className='register-title'>
         <h1>Registruj se</h1>
-        <h4>Kreiranje naloga</h4>
+        <h4>Kreiranje naloga</h4> 
     </div>       
 
     <div className='name-input'>
