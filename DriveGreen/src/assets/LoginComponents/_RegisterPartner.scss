@@ -71,6 +71,13 @@
     background-color: #f5f5f5;
     border: 1px solid #f5f5f5;
     margin-top: 12px;
+
+    font-family: Plus Jakarta Sans;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 100%;
+    padding-left: 10px;
   }
 
   .name-input input::placeholder {
@@ -105,6 +112,12 @@
     background-color: #f5f5f5;
     border: 1px solid #f5f5f5;
     margin-top: 12px;
+    font-family: Plus Jakarta Sans;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 100%;
+    padding-left: 10px;
   }
 
   .email-input input::placeholder {
@@ -139,6 +152,12 @@
     background-color: #f5f5f5;
     border: 1px solid #f5f5f5;
     margin-top: 12px;
+    font-family: Plus Jakarta Sans;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 100%;
+    padding-left: 10px;
   }
 
   .password-input input::placeholder {
@@ -162,7 +181,7 @@
     font-weight: 600;
     font-size: 14px;
     line-height: 100%;
-    color: #2c2c2c
+    color: #2c2c2c;
   }
 
   .location-input input {
@@ -172,6 +191,11 @@
     background-color: #f5f5f5;
     border: 1px solid #f5f5f5;
     margin-top: 12px;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 100%;
+    padding-left: 10px;
   }
 
   .location-input input::placeholder {
@@ -186,6 +210,11 @@
     border-radius: 8px;
     border: 1px solid #00aef7;
     background-color: rgba(0, 174, 247, 0.2);
+  }
+  .not-vision {
+    position: absolute;
+    right: 40px;
+    bottom: 427px;
   }
 
   button {
@@ -209,12 +238,27 @@
   }
 
   .link-to-map {
+    //font-family: Plus Jakarta Sans;
+    //font-weight: 600;
+    //font-size: 16px;
+    //line-height: 100%;
+    //color: #ffffff;
+    //text-decoration: none;
+    height: 48px;
+    width: 342px;
+    border-radius: 8px;
+    background-color: #5ed48c;
+    border: none;
     font-family: Plus Jakarta Sans;
     font-weight: 600;
     font-size: 16px;
     line-height: 100%;
     color: #ffffff;
+    cursor: pointer;
     text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   h4 {
