@@ -149,6 +149,7 @@ import blackThunder from "../Images/BlackThunder.png";
 import carLocation from "../Images/CarLocation.png";
 import locationSmall from "../Images/LocationSmall.png"; // Added missing import
 import { PopUp } from './PopUp';
+import {MapHeader} from "./MapHeader.jsx";
 
 export const MapBackground = forwardRef((props, ref) => {
   const mapRef = useRef();
@@ -357,7 +358,16 @@ export const MapBackground = forwardRef((props, ref) => {
     e.preventDefault();
     setShowDetails(newDetails => !newDetails);
   }
-
+  const focusOnCarLocation = () => {
+    console.log('Focus on car location');
+    if (mapInstance.current && carCoords) {
+      mapInstance.current.getView().animate({
+        center: carCoords,
+        zoom: 13,
+        duration: 1500
+      });
+    }
+  };
   return (
       <>
         <div id='map-background'>
@@ -379,7 +389,9 @@ export const MapBackground = forwardRef((props, ref) => {
             </span>
             </button> : null}
         {showPopup ? <PopUp showPopup={showPopup} /> : null }
-
+        <MapHeader
+          focusOnCarLocation={focusOnCarLocation}
+        />
       </>
   );
 });
