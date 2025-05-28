@@ -42,7 +42,8 @@ export function SuccessfulDestination() {
                 src={chargerLarge} 
                 alt="charger" />
 
-                <Link className="first-button">ZAPOCNI PUNJENJE</Link>
+                <Link
+                to="/chargingProgress" className="first-button">ZAPOCNI PUNJENJE</Link>
                 <Link 
                 to="/mapStart"
                 className="second-button">OTKAZI REZERVACIJU</Link>
