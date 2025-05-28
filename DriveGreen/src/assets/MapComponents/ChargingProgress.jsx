@@ -7,6 +7,7 @@ import batteryFour from "../Images/BatteryFour.png"
 import batteryFive from "../Images/BatteryFive.png"
 import { Link } from "react-router-dom"
 import { useState, useEffect } from "react"
+import { CongradulationsCharging } from "./CongradulationsCharging"
 
 
 export function ChargingProgress() {
@@ -21,6 +22,15 @@ export function ChargingProgress() {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+  const [changePage, setChangePage] = useState(false);
+
+  useEffect(() => {
+    setChangePage(false)
+    setTimeout(() => {
+        setChangePage(true)
+    }, 7000)
+  }, [])
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex(prev => (prev + 1) % batteryImages.length);
@@ -31,7 +41,7 @@ export function ChargingProgress() {
 
 
     return (
-        <div id="charging-container">
+        !changePage ? (<div id="charging-container">
 
             <MapHeader/>
 
@@ -50,7 +60,7 @@ export function ChargingProgress() {
 
             <MapFooter/>
 
-        </div>
+        </div>) : (<CongradulationsCharging/>)
+    
     )
-
 }

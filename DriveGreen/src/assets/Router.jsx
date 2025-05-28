@@ -11,6 +11,7 @@ import { ViewMoreCard } from './MapComponents/ViewMoreCard';
 import { ReservedCharger } from './MapComponents/ReservedCharger';
 import { SuccessfulDestination } from './MapComponents/SuccessfulDestination';
 import { ChargingProgress } from './MapComponents/ChargingProgress';
+import { CongradulationsCharging } from './MapComponents/CongradulationsCharging';
 
 export function AppRoutes() {
   return (
@@ -26,6 +27,7 @@ export function AppRoutes() {
       <Route path="/reservedCharger" element={<ReservedCharger />} />
       <Route path="/successfulDestination" element={<SuccessfulDestination />} />
       <Route path="/chargingProgress" element={<ChargingProgress />} />
+      <Route path="/congradulationsCharging" element={<CongradulationsCharging />} />
     </Routes>
   );
 };
