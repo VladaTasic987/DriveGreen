@@ -43,11 +43,18 @@
                 width: 78px;
         }
 
+
         .click-more {
                 font-family: Plus Jakarta Sans;
                 font-weight: 300;
                 font-size: 10px;
                 color: #ffffff;
+        }
+        .click-more:hover {
+                color: #338152;
+        }
+        .click-more:active {
+                color: #212121;
         }
 
         .arrow-img {
@@ -84,6 +91,13 @@
                 font-size: 10px;
                 color: #ffffff;
         }
+        .paragraph-left:hover {
+                color: #338152;
+        }
+        .paragraph-left:active {
+                color: #212121;
+        }
+
 
         .arrow-img {
                 width: 8px;

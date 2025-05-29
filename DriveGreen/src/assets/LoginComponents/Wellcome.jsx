@@ -9,16 +9,16 @@ export function Wellcome() {
 
             <p>Kreiraj svoj nalog!</p>
 
-            <button className='user-button'>
+            {/*<button className='user-button'>*/}
                 <Link
                     to="/register" className='link-to-register'
                >Korisnik</Link>
-            </button>
-            <button className={'link-to-registerPartner-button'}>
+            {/*</button>*/}
+            {/*<button className={'link-to-registerPartner-button'}>*/}
                 <Link
                     to="/registerPartner" className='link-to-registerPartner'>
                     Partner</Link>
-            </button>
+            {/*</button>*/}
 
             <h4>Postojeci nalog? &nbsp;
                 <Link
