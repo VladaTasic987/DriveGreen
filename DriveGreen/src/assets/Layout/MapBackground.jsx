@@ -160,6 +160,8 @@ export const MapBackground = forwardRef((props, ref) => {
   const [mapReady, setMapReady] = useState(false);
   const [iconCoords, setIconCoords] = useState(null);
   const [carCoords, setCarCoords] = useState(null);
+  const [locationOn, setLocationOn] = useState(false);
+
 
 
   const [showPopup, setShowPopup] = useState(false);
@@ -360,14 +362,51 @@ export const MapBackground = forwardRef((props, ref) => {
   }
   const focusOnCarLocation = () => {
     console.log('Focus on car location');
+
     if (mapInstance.current && carCoords) {
       mapInstance.current.getView().animate({
         center: carCoords,
         zoom: 13,
         duration: 1500
       });
+      setLocationOn(true)
     }
   };
+  // pracenje da li je pomerena mapa
+  useEffect(() => {
+    console.log('promena se desila');
+    let handleMapMove;
+    const view = mapInstance.current.getView();
+
+    const timeout = setTimeout(() => {
+
+    handleMapMove = () => {
+      if (!locationOn) return;
+
+      const center = view.getCenter();
+      const threshold = 10;
+      const dx = Math.abs(center[0] - carCoords[0]);
+      const dy = Math.abs(center[1] - carCoords[1]);
+
+      const isCentered = dx < threshold && dy < threshold;
+
+      if (!isCentered) {
+        setLocationOn(false); // isključi praćenje
+      }
+    };
+
+    view.on('change:center', handleMapMove);
+
+
+    }, 1500);
+    return () => {
+      clearTimeout(timeout);
+      if (handleMapMove) {
+        view.un('change:center', handleMapMove);
+      }
+    };
+  }, [locationOn, carCoords]);
+
   return (
       <>
         <div id='map-background'>
@@ -391,6 +430,7 @@ export const MapBackground = forwardRef((props, ref) => {
         {showPopup ? <PopUp showPopup={showPopup} /> : null }
         <MapHeader
           focusOnCarLocation={focusOnCarLocation}
+          locationOn={locationOn}
         />
       </>
   );
