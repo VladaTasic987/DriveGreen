@@ -43,9 +43,10 @@ export function CongradulationsCharging() {
                 alt="charger" />
 
                 <Link
+                 
                  className="first-button">OCENI STANICU</Link>
                 <Link 
-                
+                to="/mapStart"
                 className="second-button">IZADJI</Link>
 
             </div>

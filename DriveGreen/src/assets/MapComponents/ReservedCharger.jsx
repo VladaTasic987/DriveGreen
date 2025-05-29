@@ -77,12 +77,12 @@ export function ReservedCharger() {
                 }}
                 className="button-one"
                 >prikaži rutu</button>
-                <button className="button-two">
+                
                     <Link
                         className="button-two-link"
                         to="/mapStart"
                     >otkaži rezervaciju</Link>
-                </button>
+                
             </div>
             </div>  
             <MapBackground ref={mapRef} style={{ display: visible ? 'none' : 'block' }}/>

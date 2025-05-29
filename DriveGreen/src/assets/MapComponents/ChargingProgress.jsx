@@ -53,6 +53,7 @@ export function ChargingProgress() {
                 <img src={batteryImages[currentImageIndex]} alt="battone" />
 
                 <Link
+                to="/mapStart"
                 className="cancel-charging"
                 >OTKAZI PUNJENJE</Link>
 

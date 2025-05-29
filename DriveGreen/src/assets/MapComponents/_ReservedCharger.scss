@@ -147,7 +147,12 @@
         background-color: rgba(94, 212, 140, 0.5);
     }
 
-    .button-two {
+    .button-one:active {
+        background-color: rgba(56, 175, 102, 1);
+    }
+
+
+    .button-two-link {
         width: 271px;
         height: 40px;
         border-radius: 24px;
@@ -155,14 +160,21 @@
         font-weight: 700;
         font-size: 12px;
         line-height: 100%;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-transform: uppercase;
         background-color: #E6EAEA;
         cursor: pointer;
+        text-decoration: none;
+        color: rgba(94, 93, 93, 1)
     }
 
-    .button-two-link {
-        text-decoration: none;
-        color: white;
+    .button-two-link:hover {
+        background-color: rgba(245, 251, 250, 1);
+    }
+
+    .button-two-link:active {
+        background-color: rgba(220, 223, 223, 1);
     }
 }

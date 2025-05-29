@@ -61,6 +61,14 @@
             line-height: 100%;
             color: rgba(94, 93, 93, 1);
         }
+
+        .cancel-charging:hover {
+            background-color: rgba(245, 251, 250, 1);
+        }
+
+        .cancel-charging:active {
+            background-color: rgba(220, 223, 223, 1);
+        }
     }
 
 }
