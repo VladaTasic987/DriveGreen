@@ -46,17 +46,17 @@ export function MapStart() {
                 </span>
                 </button>
                 : null}
-            <button className={'popup-button'} onClick={OnShowDetails}>
-            <img
-                className="charger-location pulse"
-                src={blackThunder}
-                alt="charger" />
-            </button>
+            {/*<button className={'popup-button'} onClick={OnShowDetails}>*/}
+            {/*<img*/}
+            {/*    className="charger-location pulse"*/}
+            {/*    src={blackThunder}*/}
+            {/*    alt="charger" />*/}
+            {/*</button>*/}
 
-            <img
-                className={'car-location'}
-                src={carLocation}
-                alt="car" />
+            {/*<img*/}
+            {/*    className={'car-location'}*/}
+            {/*    src={carLocation}*/}
+            {/*    alt="car" />*/}
             
             <MapFooter/>
             {showPopup ? <PopUp showPopup={showPopup}/> : null}

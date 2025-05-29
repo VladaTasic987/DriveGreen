@@ -32,7 +32,7 @@
     .login-title {
         width: 100%;
         margin-left: 65px;
-
+        
     }
 
     .login-title h1 {
@@ -45,7 +45,7 @@
     }
 
     .login-title p {
-        font-family: Puls Jakarta Sans;
+        font-family: Plus Jakarta Sans;
         font-weight: 600;
         font-size: 16px;
         line-height: 100%;
@@ -162,6 +162,7 @@
 
     .link-to-forgot {
         text-decoration: none;
+        margin-top: 10px;
     }
 
     .link-to-forgot h4 {
@@ -210,6 +211,7 @@
         font-size: 16px;
         line-height: 100%;
         color: rgba(52, 163, 83, 1);
+        text-decoration: none;
     }
 
     .login-button:hover {
@@ -248,5 +250,15 @@
     .login-google:active {
         background-color: rgba(66, 128, 239, 0.2);
         border: 2px solid rgba(66, 128, 239, 1);
+    }
+
+    .warrning-pass {
+        font-family: Plus Jakarta Sans;
+        font-weight: 600;
+        font-size: 14px;
+        color: #D13030;
+        position: absolute;
+        top: 439px;
+        left: 25px;
     }
 }

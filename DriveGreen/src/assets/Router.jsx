@@ -9,21 +9,25 @@ import { ForgotCodePassword } from './LoginComponents/ForgotCodePassword';
 import { MapStart } from './MapComponents/MapStart';
 import { ViewMoreCard } from './MapComponents/ViewMoreCard';
 import { ReservedCharger } from './MapComponents/ReservedCharger';
-import { LoginContainer } from './Containers/LoginContainer';
+import { SuccessfulDestination } from './MapComponents/SuccessfulDestination';
+import { ChargingProgress } from './MapComponents/ChargingProgress';
+import { CongradulationsCharging } from './MapComponents/CongradulationsCharging';
 
 export function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Wellcome />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
+      <Route path="/register" element={<Register/>} />
       <Route path="/forgot" element={<ForgotPasswordEmail />} />
       <Route path="/registerPartner" element={<RegisterPartner />} />
       <Route path="/passwordCode" element={<ForgotCodePassword />} />
       <Route path="/mapStart" element={<MapStart />} />
       <Route path="/viewMore" element={<ViewMoreCard />} />
       <Route path="/reservedCharger" element={<ReservedCharger />} />
-      <Route path="/Container" element={<LoginContainer />} />
+      <Route path="/successfulDestination" element={<SuccessfulDestination />} />
+      <Route path="/chargingProgress" element={<ChargingProgress />} />
+      <Route path="/congradulationsCharging" element={<CongradulationsCharging />} />
     </Routes>
   );
 };

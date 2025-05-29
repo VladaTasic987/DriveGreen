@@ -1,9 +1,13 @@
 import arrowBack from "../Images/ArrowBack.png";
 import googleIcon from "../Images/GoogleIcon.png";
-
 import {Link} from "react-router-dom";
+import {useUser} from "../Context.jsx";
+import notVision from "../Images/NotVision.png";
+import vision from "../Images/Vision.png";
 
 export function RegisterPartner() {
+
+    const { visible, toggleVisible } = useUser();
 
     return (
 
@@ -46,12 +50,22 @@ export function RegisterPartner() {
             <div className='password-input'>
                 <label htmlFor="">
                     Lozinka
-                    <br />
+                    <br/>
                     <input
-                        type="password"
-                        placeholder='••••••••••'
-
-                        />
+                        type={visible ? "text" : "password"}
+                        placeholder='Upisite Vasu lozinku...'
+                    />
+                {!visible ? <img
+                        onClick={toggleVisible}
+                        className='not-vision'
+                        src={notVision}
+                        alt="eye" />
+                    :
+                    <img
+                        onClick={toggleVisible}
+                        className='not-vision'
+                        src={vision}
+                        alt="eye" />}
 
                 </label>
             </div>
@@ -108,11 +122,11 @@ export function RegisterPartner() {
                 <span className={'checkbox-span'}>  &nbsp;Saglasan sam sa kupovinom i opštim uslovima poslovanja</span>
             </div>
 
-                <button className={'login-button'}> 
-                <Link 
+                {/*<button className={'login-button'}>*/}
+                <Link
                 to="/mapStart"
-                className="link-to-map">Registruj se</Link>    
-                </button>
+                className="link-to-map">Registruj se</Link>
+                {/*</button>*/}
                     <h4>Postojeći korisnik? &nbsp;
                         <Link
                             to="/login" className='link-to-login'

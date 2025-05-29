@@ -6,7 +6,7 @@ import { UserPopup } from "./UserPopup"
 import { useState } from "react"
 
 
-export function MapHeader() {
+export function MapHeader({focusOnCarLocation, locationOn}) {
 
     const [visible, setVisible] = useState(false);
 
@@ -24,12 +24,16 @@ export function MapHeader() {
                 </div>
                 
                 <div className="header-right">
-
+                <button onClick={focusOnCarLocation}>
                 <img 
                 className="header-location-img"
                 src={location} 
                 alt="map-location" 
                 />
+                    <span className={"header-location-on"}>
+                        {locationOn ? 'ON' : 'OFF'}
+                    </span>
+                </button>
                 <img 
                 className="header-user-img"
                 src={mapUser} 

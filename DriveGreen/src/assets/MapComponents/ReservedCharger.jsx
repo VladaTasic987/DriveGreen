@@ -6,13 +6,21 @@ import DottedLine from "../Images/DottedLine.png"
 import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
 import MapBackground from "../Layout/MapBackground";
+import { SuccessfulDestination } from "./SuccessfulDestination";
 
 
 
 export function ReservedCharger() {
     const [visible, setVisible] = useState(true);
 
+    const [showCard, setShowCard] = useState(false);
 
+    function showCardAfterSeconds() {
+        setShowCard(false);
+        setTimeout(() => {
+            setShowCard(true);
+        }, 4000)
+    }
 
     const mapRef = useRef();
 
@@ -26,7 +34,7 @@ export function ReservedCharger() {
     };
 
     return (
-        <div id="reserved-container">
+        !showCard ? (<div id="reserved-container">
             <MapHeader />
 
             <div style={{ display: visible ? 'block' : 'none' }}>
@@ -63,19 +71,23 @@ export function ReservedCharger() {
 
                 <div className="buttons-div">
                     <button
-                        onClick={handleDrawRoute}
+                        onClick={() => {
+                            handleDrawRoute();
+                            showCardAfterSeconds();
+                        }}
                         className="button-one"
                     >prikaži rutu</button>
 
                     <Link
-                        className="button-two"
+                        className="button-two-link"
                         to="/viewMore"
                     >otkaži rezervaciju</Link>
-
-                </div>
+                </button>
             </div>
             <MapBackground ref={mapRef} style={{ display: visible ? 'none' : 'block' }} />
             <MapFooter />
-        </div>
+        </div>) : (<SuccessfulDestination />)
+
     )
+
 }

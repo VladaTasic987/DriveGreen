@@ -1,12 +1,13 @@
 import arrowBack from '../Images/ArrowBack.png';
 import { Link } from 'react-router-dom';
 import notVision from '../Images/NotVision.png';
+import vision from '../Images/Vision.png';
 import googleIcon from '../Images/GoogleIcon.png'
+import { useUser } from '../Context';
 
 export function Register() {
 
-
-    
+const { visible, toggleVisible } = useUser();
 
 return (
 
@@ -22,7 +23,7 @@ return (
 
     <div className='register-title'>
         <h1>Registruj se</h1>
-        <h4>Kreiranje naloga</h4>
+        <h4>Kreiranje naloga</h4> 
     </div>       
 
     <div className='name-input'>
@@ -52,7 +53,7 @@ return (
             Lozinka
             <br />
             <input 
-            type="password"
+            type={visible ? "text" : "password"}
             placeholder='Upisite Vasu lozinku...'
             />
 
@@ -60,10 +61,17 @@ return (
         </label>
 
 
-        <img
+        {!visible ? <img
+        onClick={toggleVisible}
         className='not-vision' 
         src={notVision} 
         alt="eye" />
+        :
+        <img
+        onClick={toggleVisible}
+        className='not-vision' 
+        src={vision} 
+        alt="eye" />}
     </div>
 
     <div className='agree-container'>

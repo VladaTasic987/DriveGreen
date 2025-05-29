@@ -2,8 +2,19 @@ import { Link } from 'react-router-dom';
 import arrowBack from '../Images/ArrowBack.png';
 import googleIcon from '../Images/GoogleIcon.png';
 import notVision from '../Images/NotVision.png';
+import vision from '../Images/Vision.png';
+import { useUser } from '../Context';
+import { useState } from 'react';
 
 export function Login() {
+
+const { visible, toggleVisible, email, password, getEmail, getPassword, existingEmail, existingPassword } = useUser();
+
+const [typingStarted, setTypingStarted] = useState(false)
+
+const userCredentials = existingPassword(email, password) && existingEmail;
+
+console.log(existingPassword(email, password));
 
     return (
         <div id='login-card'>
@@ -31,6 +42,11 @@ export function Login() {
                     Email
                     <br />
                     <input
+                        onChange={(e)=> {
+                            getEmail(e)
+                            setTypingStarted(true)
+                        }}
+                        value={email}
                         type="text"
                         placeholder='Vaša email adresa'
                     />
@@ -42,13 +58,25 @@ export function Login() {
                     Lozinka
                     <br />
                     <input
-                        type="password"
+                        onChange={(e)=> {
+                            getPassword(e)
+                            setTypingStarted(true)
+                        }}
+                        value={password}
+                        type={visible ? "text" : "password"}
                         placeholder='Vaša lozinka'
                     />
-                    <img 
+                   {!visible ? <img 
+                    onClick={toggleVisible}
                     className='not-vision'
                     src={notVision} 
                     alt="eye" />
+                    :
+                    <img 
+                    onClick={toggleVisible}
+                    className='not-vision'
+                    src={vision} 
+                    alt="eye" /> }
                 </label>
             </div>
 
@@ -61,7 +89,8 @@ export function Login() {
 
             <Link
             className='link-to-map'
-            to="/mapStart"
+            to={existingEmail && existingPassword(email, password) ? "/mapStart" : ""}
+            
             >Prijavi se
             </Link>
 
@@ -79,6 +108,12 @@ export function Login() {
                     alt="googleicon" />
                 Koristi Google nalog</button>
 
+                <p
+                    className="warrning-pass"
+                    style={{ display: typingStarted && !userCredentials ? "block" : "none"}}
+                    >
+                    Pogrešna lozinka ili email
+                </p>
         </div>
     )
 

@@ -40,7 +40,7 @@
     }
 
     .register-title h4 {
-        font-family: Puls Jakarta Sans;
+        font-family: Plus Jakarta Sans;
         font-weight: 600;
         font-size: 16px;
         line-height: 100%;
@@ -256,6 +256,14 @@
         align-items: center;
     }
 
+    .link-to-map:hover {
+        background-color: rgba(94, 212, 140, 0.6);
+    }
+
+    .link-to-map:active {
+        background-color: rgba(56, 175, 102, 1);
+    }
+
     .existing-user {
         font-family: Plus Jakarta Sans;
         font-weight: 600;
@@ -270,6 +278,7 @@
         font-size: 16px;
         color: rgba(52, 163, 83, 1);
         margin-left: 4px;
+        text-decoration: none;
     }
 
     .register-google {
@@ -288,6 +297,18 @@
         font-size: 16px;
         color: #4280ef;
         cursor: pointer;
+    }
+
+     .register-google:hover {
+        border-radius: 8px;
+        border: 2px solid rgba(66, 128, 239, 1);
+        box-shadow: 0 0 0 4px rgba(66, 128, 239, 0.4); 
+        border-radius: 8px;
+    }
+
+    .register-google:active {
+        background-color: rgba(66, 128, 239, 0.2);
+        border: 2px solid rgba(66, 128, 239, 1);
     }
 
 }
