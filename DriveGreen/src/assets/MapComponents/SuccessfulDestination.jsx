@@ -3,6 +3,7 @@ import { MapFooter } from "../Layout/MapFooter"
 import congradulationBackground from "../Images/CongratulationBackground.png"
 import dottedLine from "../Images/DottedLine.png"
 import chargerLarge from "../Images/ChargerLarge.png"
+import mapBlur from "../Images/MapBlur.png"
 import { Link } from "react-router-dom"
 
 
@@ -14,6 +15,12 @@ export function SuccessfulDestination() {
 
         
         <div id="success-container">
+
+            <img 
+            src={mapBlur} 
+            alt="map-blur" 
+            className="map-blur"
+            />
             <MapHeader/>
 
             <div className="middle-content">

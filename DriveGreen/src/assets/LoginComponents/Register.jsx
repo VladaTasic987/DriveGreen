@@ -7,7 +7,7 @@ import { useUser } from '../Context';
 
 export function Register() {
 
-const { visible, toggleVisible } = useUser();
+const { visible, toggleVisible, email, password, getEmail, getPassword, name, getName, registerUser} = useUser();
 
 return (
 
@@ -31,6 +31,8 @@ return (
             Ime i prezime
             <br />
             <input 
+            onChange={(e) => getName(e)}
+            value={name}
             type="text"
             placeholder='Upisite Vase ime i prezime...'
             />
@@ -42,6 +44,8 @@ return (
             Email
             <br />
             <input 
+            value={email}
+            onChange={(e) => getEmail(e)}
             type="text"
             placeholder='Upisite Vas email...'
             />
@@ -53,6 +57,8 @@ return (
             Lozinka
             <br />
             <input 
+            value={password}
+            onChange={(e) => getPassword(e)}
             type={visible ? "text" : "password"}
             placeholder='Upisite Vasu lozinku...'
             />
@@ -98,6 +104,7 @@ return (
 
         <button 
         className='register-google'
+        onClick={()=>registerUser()}
         >
             <img
                 src={googleIcon}

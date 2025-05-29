@@ -12,6 +12,7 @@ export const UserProvider = ({ children }) => {
     {id: 2, name: "Aleksandra Mircic", email: "aleksandra@gmail.com", password: "11223344"}
   ]);
 
+  
   function toggleVisible() {
     setVisible(Toggle => !Toggle);
   }
@@ -22,6 +23,10 @@ export const UserProvider = ({ children }) => {
 
   function getPassword(e) {
     setPassword(e.target.value)
+  }
+
+  function getName(e) {
+    setName(e.target.value)
   }
 
   const existingEmail = users.some((user) => {
@@ -36,13 +41,15 @@ export const UserProvider = ({ children }) => {
     else return false    
 }
       
-  
+  function registerUser() {
+    setUsers([...users, {id: Date.now(), name: name, email: email, password: password}])
+  }
 
-  
+  console.log(users);
   
 
   return (
-    <UserContext.Provider value={{ visible, toggleVisible, email, password, getEmail, getPassword, existingEmail, existingPassword }}>
+    <UserContext.Provider value={{ visible, toggleVisible, email, password, getEmail, getPassword, existingEmail, existingPassword, name, getName, registerUser }}>
       {children}
     </UserContext.Provider>
   );

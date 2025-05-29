@@ -23,6 +23,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        position: absolute;
 
         h4 {
             font-family: Plus jakarta Sans;
@@ -68,6 +69,14 @@
 
         .cancel-charging:active {
             background-color: rgba(220, 223, 223, 1);
+        }
+
+        .map-blur {
+            position: absolute;
+            z-index: 1;
+            top: 61px;
+            height: 723px;
+            width: 100%;
         }
     }
 

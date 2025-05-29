@@ -22,12 +22,12 @@
     .background-image {
         position: absolute;
         top: 30px;
-        z-index: 1;    
+        z-index: 2;    
     }
 
     .text-container {
         position: absolute;
-        z-index: 2;
+        z-index: 3;
         width: 246px;
         height: 31px;
         text-align: center;
@@ -37,7 +37,7 @@
 
     .sucess-text {
         position: absolute;
-        z-index: 2;
+        z-index: 3;
         width: 100%;
         font-family: Plus Jakarta Sans;
         font-weight: 700;
@@ -51,7 +51,7 @@
         position: absolute;
         top: 150px;
         left: 140px;
-        z-index: 2;
+        z-index: 3;
         font-family: Puls Jakarta Sans;
         font-weight: 400;
         font-size: 12px;
@@ -61,14 +61,14 @@
 
     .dotted-line {
         position: absolute;
-        z-index: 2;
+        z-index: 3;
         top: 190px;
         left: 50px;
     }
 
     .station-text {
         position: absolute;
-        z-index: 2;
+        z-index: 3;
         top: 200px;
         left: 169px;
         font-family: Plus Jakarta Sans;
@@ -80,7 +80,7 @@
 
     .robert-bosch {
         position: absolute;
-        z-index: 2;
+        z-index: 3;
         top: 220px;
         left: 120px;
         font-family: Plus  Jakarta Sans;
@@ -92,7 +92,7 @@
 
     .charger-img {
         position: absolute;
-        z-index: 2;
+        z-index: 3;
         width: 257.7px;
         height: 183px;
         border-radius: 15px;
@@ -102,7 +102,7 @@
 
     .first-button {
         position: absolute;
-        z-index: 2;
+        z-index: 3;
         top: 460px;
         left: 60px;
         text-decoration: none;
@@ -130,7 +130,7 @@
 
     .second-button {
         position: absolute;
-        z-index: 2;
+        z-index: 3;
         position: absolute;
         z-index: 2;
         top: 510px;
@@ -156,6 +156,14 @@
 
     .second-button:active {
         background-color: rgba(220, 223, 223, 1);
+    }
+
+    .map-blur {
+        position: absolute;
+        z-index: 1;
+        top: 61px;
+        height: 723px;
+        width: 100%;
     }
 
 }

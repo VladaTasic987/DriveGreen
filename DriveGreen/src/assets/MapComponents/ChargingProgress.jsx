@@ -5,6 +5,7 @@ import batteryTwo from "../Images/BatteryTwo.png"
 import batteryThree from "../Images/BatteryThree.png"
 import batteryFour from "../Images/BatteryFour.png"
 import batteryFive from "../Images/BatteryFive.png"
+import mapBlur from "../Images/MapBlur.png"
 import { Link } from "react-router-dom"
 import { useState, useEffect } from "react"
 import { CongradulationsCharging } from "./CongradulationsCharging"
@@ -42,6 +43,11 @@ export function ChargingProgress() {
 
     return (
         !changePage ? (<div id="charging-container">
+
+            <img 
+            className="mapBlur"
+            src={mapBlur} 
+            alt="map-blur" />
 
             <MapHeader/>
 

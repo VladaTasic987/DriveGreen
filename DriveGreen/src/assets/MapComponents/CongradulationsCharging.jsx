@@ -3,6 +3,7 @@ import { MapFooter } from "../Layout/MapFooter"
 import congradulationBackground from "../Images/CongratulationBackground.png"
 import dottedLine from "../Images/DottedLine.png"
 import chargerInCar from "../Images/ChargerInCar.png"
+import mapBlur from "../Images/MapBlur.png"
 import { Link } from "react-router-dom"
 
 
@@ -14,6 +15,12 @@ export function CongradulationsCharging() {
 
         
         <div id="congrads-container">
+
+            <img 
+            className="map-blur"
+            src={mapBlur} 
+            alt="map-blur" />
+
             <MapHeader/>
 
             <div className="middle-content">
