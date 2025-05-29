@@ -182,7 +182,6 @@
         font-weight: 700;
         font-size: 12px;
         line-height: 100%;
-        text-align: center;
         background-color: #5ED48C;
         width: 366px;
         height: 41px;
@@ -190,11 +189,11 @@
         border: none;
         margin: 0 auto 0 auto;
         cursor: pointer;
-    }
-
-    .link-to-reserved {
         text-decoration: none;
         color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .reserve-button:hover {

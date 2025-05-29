@@ -13,7 +13,7 @@
     @import "../Layout/MapHeader";
     @import "../Layout/MapBackground";
     @import "../Layout/MapFooter";
-    
+
 
     .background {
         width: 337.53px;
@@ -159,10 +159,16 @@
         text-transform: uppercase;
         background-color: #E6EAEA;
         cursor: pointer;
+        text-decoration: none;
+        color: #5E5D5D;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    .button-two-link {
-        text-decoration: none;
-        color: white;
+    .button-two:hover {
+        background-color: #F5FBFA;
+        color: #5E5D5D;
     }
+
 }

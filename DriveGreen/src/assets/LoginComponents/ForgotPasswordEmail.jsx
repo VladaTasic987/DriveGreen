@@ -31,13 +31,12 @@ export function ForgotPasswordEmail() {
                 </label>
             </div>
 
-            <button className="send-code">
-                <Link
-                    className="link-send-code"
-                    to="/passwordCode">
-                    Pošalji kod
-                </Link>
-            </button>
+
+            <Link
+                className="send-code"
+                to="/passwordCode">
+                Pošalji kod
+            </Link>
         </div>
     )
 }
