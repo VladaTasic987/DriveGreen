@@ -14,8 +14,6 @@ const [typingStarted, setTypingStarted] = useState(false)
 
 const userCredentials = existingPassword(email, password) && existingEmail;
 
-console.log(existingPassword(email, password));
-
     return (
         <div id='login-card'>
 

@@ -201,7 +201,7 @@ export const MapBackground = forwardRef((props, ref) => {
       });
 
       if (feature && feature.get('name') === 'RandomIcon') {
-        console.log('Vladimir');
+        
         // setShowDetails(true);
           setShowDetails(newDetails => !newDetails);
       }
