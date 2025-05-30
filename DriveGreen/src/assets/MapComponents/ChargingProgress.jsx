@@ -45,7 +45,7 @@ export function ChargingProgress() {
         !changePage ? (<div id="charging-container">
 
             <img 
-            className="mapBlur"
+            className="map-blur"
             src={mapBlur} 
             alt="map-blur" />
 

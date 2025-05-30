@@ -71,13 +71,15 @@
             background-color: rgba(220, 223, 223, 1);
         }
 
-        .map-blur {
+        
+    }
+
+    .map-blur {
             position: absolute;
-            z-index: 1;
-            top: 18px;
+            z-index: 0;
+            top: 19px;
             height: 765px;
             width: 100%;
         }
-    }
 
 }
