@@ -21,7 +21,7 @@ export function ReservedCharger() {
             setShowCard(true);
         }, 4000)
     }
-
+ 
     const mapRef = useRef();
 
     function handleDrawRoute() {
