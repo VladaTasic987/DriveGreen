@@ -3,11 +3,13 @@ import { Link } from 'react-router-dom';
 import notVision from '../Images/NotVision.png';
 import vision from '../Images/Vision.png';
 import googleIcon from '../Images/GoogleIcon.png'
+import passValidationRed from '../Images/PasswordValidationRedLine.png';
+import passValidationGreen from '../Images/PasswordValidationGreenLine.png';
 import { useUser } from '../Context';
 
 export function Register() {
 
-const { visible, toggleVisible, email, password, getEmail, getPassword, name, getName, registerUser} = useUser();
+const { visible, toggleVisible, email, password, getEmail, getPassword, name, getName, registerUser, existingEmail} = useUser();
 
 return (
 
@@ -113,8 +115,30 @@ return (
         </button>
         
     
+        {existingEmail ?<p className='existing-account'>Postojeci nalog. Ulogujte se</p> : null}
+
+
+        {password.length < 8 && password.length > 0 ?<div className='pass-validation-container'>
+            <img 
+            className='red-line'
+            src={passValidationRed} alt="pass-val" />
+            <p className='pass-val-text'>Lozinka je preslaba. Koristite 8 karaktera, jedno veliko slovo i jedan specijalan karakter</p>
+        </div> :
+        password.length >= 8 ?
+        <div 
+        id ='pas-container-green'>
+            <img 
+            className='green-line'
+            src={passValidationGreen} alt="green-line" />
+            <p
+            className='green-text'
+            >Jaka lozinka</p>
+        </div> : null}
 
 </div>
+
+        
+
     )
 
 }

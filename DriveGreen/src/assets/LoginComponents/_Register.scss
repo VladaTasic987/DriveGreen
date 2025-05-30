@@ -37,6 +37,7 @@
         font-size: 42px;
         line-height: 100%;
         color: #5ed48c;
+        margin-top: 20px;
     }
 
     .register-title h4 {
@@ -53,7 +54,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 50px;
+        margin-top: 40px;
         position: relative;
     }
 
@@ -113,6 +114,7 @@
         font-size: 14px;
         line-height: 100%;
         color: #2c2c2c;
+        margin-top: 10px;
     }
 
     .email-input input {
@@ -163,6 +165,7 @@
         font-size: 14px;
         line-height: 100%;
         color: #2c2c2c;
+        margin-top: 10px;
     }
 
     .password-input input {
@@ -220,7 +223,7 @@
         gap: 5px;
         width: 100%;
         margin-left: 50px;
-        margin-top: 10px;
+        margin-top: 50px;
     }
 
     .check-box {
@@ -249,7 +252,7 @@
         line-height: 100%;
         color: #ffffff;
         cursor: pointer;
-        margin-top: 30px;
+        margin-top: 15px;
         text-decoration: none;
         display: flex;
         justify-content: center;
@@ -291,7 +294,7 @@
         border-radius: 8px;
         border: 1px solid #4280ef;
         background-color: transparent;
-        margin-top: 30px;
+        margin-top: 15px;
         font-family: Plus Jakarta Sans;
         font-weight: 600;
         font-size: 16px;
@@ -309,6 +312,70 @@
     .register-google:active {
         background-color: rgba(66, 128, 239, 0.2);
         border: 2px solid rgba(66, 128, 239, 1);
+    }
+
+    .existing-account {
+        font-family: Plus Jakarta Sans;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 100%;
+        color: rgba(209, 48, 48, 1);
+        position: absolute;
+        top: 414px;
+        left: 25px;
+    }
+
+    .pass-validation-container {
+        width: 309px;
+        height: 36px;
+        position: absolute;
+        top: 517px;
+        left: 25px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+
+
+        .red-line {
+            height: 3px;
+            width: 342px;
+            border-radius: 50px;
+        }
+
+        .pass-val-text {
+            font-family: Plus Jakarta Sans;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 100%;
+            color: rgba(209, 48, 48, 1);
+            
+        }
+    }
+
+    #pas-container-green {
+        width: 309px;
+        height: 36px;
+        position: absolute;
+        top: 517px;
+        left: 25px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+
+        .green-line {
+            height: 3px;
+            width: 342px;
+            border-radius: 50px;
+        }
+
+        .green-text {
+            font-family: Plus Jakarta Sans;
+            font-weight: 600;
+            font-size: 14px;
+            color: rgba(52, 163, 83, 1);
+        }
     }
 
 }
