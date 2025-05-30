@@ -6,10 +6,27 @@ import googleIcon from '../Images/GoogleIcon.png'
 import passValidationRed from '../Images/PasswordValidationRedLine.png';
 import passValidationGreen from '../Images/PasswordValidationGreenLine.png';
 import { useUser } from '../Context';
+import { useState } from 'react';
 
 export function Register() {
 
+const [isChecked, setIsChecked] = useState(false);
+
 const { visible, toggleVisible, email, password, getEmail, getPassword, name, getName, registerUser, existingEmail} = useUser();
+
+const passwordRegex = /^(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/;
+
+const canRegister = 
+    password.length >= 8 &&
+    passwordRegex.test(password) &&
+    !existingEmail &&
+    isChecked;
+
+const handleCheckboxChange = () => {
+    setIsChecked(prev => !prev);
+  };
+
+  console.log(isChecked);
 
 return (
 
@@ -86,6 +103,8 @@ return (
     <input 
             type="checkbox" 
             className='check-box'
+            checked={isChecked}
+            onChange={handleCheckboxChange}
             />
     <p className='agree-text'>Saglasan sam sa politikom i opstim uslovima poslovanja</p>
     </div>
@@ -93,8 +112,11 @@ return (
 
     
         <Link 
-        to="/MapStart"
-        className='link-to-map'
+        to={canRegister ? "/MapStart" : ""}
+        className={'link-to-map'}
+        onClick={()=> {if(canRegister) {
+            registerUser()
+        }}}
         >Registruj se</Link>
 
         <h4 className='existing-user'>Postojeci korisnik? 
@@ -106,7 +128,6 @@ return (
 
         <button 
         className='register-google'
-        onClick={()=>registerUser()}
         >
             <img
                 src={googleIcon}
@@ -118,22 +139,21 @@ return (
         {existingEmail ?<p className='existing-account'>Postojeci nalog. Ulogujte se</p> : null}
 
 
-        {password.length < 8 && password.length > 0 ?<div className='pass-validation-container'>
-            <img 
-            className='red-line'
-            src={passValidationRed} alt="pass-val" />
-            <p className='pass-val-text'>Lozinka je preslaba. Koristite 8 karaktera, jedno veliko slovo i jedan specijalan karakter</p>
-        </div> :
-        password.length >= 8 ?
-        <div 
-        id ='pas-container-green'>
-            <img 
-            className='green-line'
-            src={passValidationGreen} alt="green-line" />
-            <p
-            className='green-text'
-            >Jaka lozinka</p>
-        </div> : null}
+        {password && !passwordRegex.test(password) ? (
+    <div className='pass-validation-container'>
+        <img 
+        className='red-line'
+        src={passValidationRed} alt="pass-val" />
+        <p className='pass-val-text'>Lozinka je preslaba. Koristite 8 karaktera, jedno veliko slovo i jedan specijalan karakter</p>
+    </div>
+) : passwordRegex.test(password) ? (
+    <div id='pas-container-green'>
+        <img 
+        className='green-line'
+        src={passValidationGreen} alt="green-line" />
+        <p className='green-text'>Jaka lozinka</p>
+    </div>
+) : null}
 
 </div>
 
