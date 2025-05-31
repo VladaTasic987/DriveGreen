@@ -195,6 +195,24 @@
         align-items: center;
     }
 
+    .link-to-map-disabled {
+        height: 48px;
+        width: 342px;
+        border-radius: 8px;
+        background-color: rgba(94, 212, 140, 0.5);
+        border: none;
+        font-family: Plus Jakarta Sans;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        color: #ffffff;
+        cursor: pointer;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .new-user {
         font-family: Plus Jakarta Sans;
         font-weight: 600;

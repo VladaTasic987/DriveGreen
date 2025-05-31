@@ -267,6 +267,25 @@
         background-color: rgba(56, 175, 102, 1);
     }
 
+    .disabled-link-to-map {
+        height: 48px;
+        width: 342px;
+        border-radius: 8px;
+        background-color: rgba(94, 212, 140, 0.5);
+        border: none;
+        font-family: Plus Jakarta Sans;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        color: #ffffff;
+        cursor: pointer;
+        margin-top: 15px;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .existing-user {
         font-family: Plus Jakarta Sans;
         font-weight: 600;

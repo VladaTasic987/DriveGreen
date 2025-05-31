@@ -20,13 +20,15 @@ const canRegister =
     password.length >= 8 &&
     passwordRegex.test(password) &&
     !existingEmail &&
-    isChecked;
+    isChecked &&
+    name.length > 5
+    ;
 
 const handleCheckboxChange = () => {
     setIsChecked(prev => !prev);
   };
 
-  console.log(isChecked);
+  
 
 return (
 
@@ -113,7 +115,7 @@ return (
     
         <Link 
         to={canRegister ? "/MapStart" : ""}
-        className={'link-to-map'}
+        className={canRegister ? 'link-to-map' : "disabled-link-to-map"}
         onClick={()=> {if(canRegister) {
             registerUser()
         }}}

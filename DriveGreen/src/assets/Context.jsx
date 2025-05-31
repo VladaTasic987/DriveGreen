@@ -44,8 +44,6 @@ export const UserProvider = ({ children }) => {
   function registerUser() {
     setUsers([...users, {id: Date.now(), name: name, email: email, password: password}])
   }
-
-  console.log(users);
   
 
   return (

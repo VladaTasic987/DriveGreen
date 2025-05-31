@@ -86,7 +86,7 @@ const userCredentials = existingPassword(email, password) && existingEmail;
 
 
             <Link
-            className='link-to-map'
+            className={existingPassword(email, password) ? 'link-to-map' : "link-to-map-disabled"}
             to={existingEmail && existingPassword(email, password) ? "/mapStart" : ""}
             
             >Prijavi se
