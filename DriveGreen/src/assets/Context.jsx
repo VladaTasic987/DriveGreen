@@ -18,6 +18,7 @@ export const UserProvider = ({ children }) => {
   }
 
   function getEmail(e) {
+    setEmail("");
     setEmail(e.target.value)
   }
 
@@ -44,10 +45,16 @@ export const UserProvider = ({ children }) => {
   function registerUser() {
     setUsers([...users, {id: Date.now(), name: name, email: email, password: password}])
   }
+
+  function clearInputs() {
+    setEmail("");
+    setName("");
+    setPassword("");
+  }
   
 
   return (
-    <UserContext.Provider value={{ visible, toggleVisible, email, password, getEmail, getPassword, existingEmail, existingPassword, name, getName, registerUser }}>
+    <UserContext.Provider value={{ visible, toggleVisible, email, password, getEmail, getPassword, existingEmail, existingPassword, name, getName, registerUser, clearInputs }}>
       {children}
     </UserContext.Provider>
   );

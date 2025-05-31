@@ -12,7 +12,7 @@ export function Register() {
 
 const [isChecked, setIsChecked] = useState(false);
 
-const { visible, toggleVisible, email, password, getEmail, getPassword, name, getName, registerUser, existingEmail} = useUser();
+const { visible, toggleVisible, email, password, getEmail, getPassword, name, getName, registerUser, existingEmail, clearInputs} = useUser();
 
 const passwordRegex = /^(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/;
 
@@ -118,13 +118,16 @@ return (
         className={canRegister ? 'link-to-map' : "disabled-link-to-map"}
         onClick={()=> {if(canRegister) {
             registerUser()
-        }}}
+        }
+        clearInputs()
+        }}
         >Registruj se</Link>
 
         <h4 className='existing-user'>Postojeci korisnik? 
         <Link
         to="/Login"
         className='link-to-login'
+        onClick={clearInputs}
         >Prijavi se!</Link> 
         </h4>
 

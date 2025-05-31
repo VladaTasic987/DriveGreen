@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 export function Login() {
 
-const { visible, toggleVisible, email, password, getEmail, getPassword, existingEmail, existingPassword } = useUser();
+const { visible, toggleVisible, email, password, getEmail, getPassword, existingEmail, existingPassword, clearInputs } = useUser();
 
 const [typingStarted, setTypingStarted] = useState(false)
 
@@ -79,6 +79,7 @@ const userCredentials = existingPassword(email, password) && existingEmail;
             </div>
 
             <Link
+            onClick={clearInputs}
                 className='link-to-forgot'
                 to="/forgot">
                 <h4>Zaboravljena lozinka?</h4>
@@ -86,7 +87,10 @@ const userCredentials = existingPassword(email, password) && existingEmail;
 
 
             <Link
+            onClick={clearInputs}
+
             className={existingPassword(email, password) ? 'link-to-map' : "link-to-map-disabled"}
+
             to={existingEmail && existingPassword(email, password) ? "/mapStart" : ""}
             
             >Prijavi se
@@ -94,6 +98,7 @@ const userCredentials = existingPassword(email, password) && existingEmail;
 
             <h4 className='new-user'>Novi Korisnik? 
                 <Link 
+                onClick={clearInputs}
                 to="/register"
                 className='link-to-register'>
                 Kreiraj svoj nalog!
