@@ -1,6 +1,6 @@
 import { MapFooter } from "../Layout/MapFooter"
 import { MapHeader } from "../Layout/MapHeader"
-import arrowBack from "../Images/arrowBack.png"
+import arrowBack from "../Images/ArrowBack.png"
 import { Link } from "react-router-dom"
 import { useRef, useState } from "react";
 
