@@ -1,6 +1,7 @@
 import blackThunder from "../Images/BlackThunder.png"
 import arrowRight from "../Images/ArrowRight.png"
 import { useLocation } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 export function MapFooter() {
 
@@ -43,7 +44,10 @@ export function MapFooter() {
             <div className="footer-right">
                 <h4 className="condition-text">{location.pathname === '/mapStart' ?footerElements.conditionText : footerElements.manual}</h4>
                 <div className="right-content">
-                    <p className="paragraph-left">{footerElements.clickLeft}</p>
+                    <Link 
+                    className="paragraph-left"
+                    to="/businessConditions"
+                    >{footerElements.clickLeft}</Link>
                     {/*<img */}
                     {/*className="arrow-img"*/}
                     {/*src={footerElements.arrowRight} */}

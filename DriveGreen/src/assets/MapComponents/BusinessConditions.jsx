@@ -39,7 +39,7 @@ export function BusinessConditions() {
             <div className="condition-header">
                 <img src={arrowBack} alt='arrow-back' />
                 <Link
-                    to="/login"
+                    to="/mapStart"
                     className='link-to-welcome'
                 >
                     Nazad
