@@ -12,13 +12,14 @@ import { ReservedCharger } from './MapComponents/ReservedCharger';
 import { SuccessfulDestination } from './MapComponents/SuccessfulDestination';
 import { ChargingProgress } from './MapComponents/ChargingProgress';
 import { CongradulationsCharging } from './MapComponents/CongradulationsCharging';
+import { BusinessConditions } from './MapComponents/BusinessConditions';
 
 export function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Wellcome />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register/>} />
+      <Route path="/register" element={<Register />} />
       <Route path="/forgot" element={<ForgotPasswordEmail />} />
       <Route path="/registerPartner" element={<RegisterPartner />} />
       <Route path="/passwordCode" element={<ForgotCodePassword />} />
@@ -28,6 +29,7 @@ export function AppRoutes() {
       <Route path="/successfulDestination" element={<SuccessfulDestination />} />
       <Route path="/chargingProgress" element={<ChargingProgress />} />
       <Route path="/congradulationsCharging" element={<CongradulationsCharging />} />
+      <Route path="/businessConditions" element={<BusinessConditions />} />
     </Routes>
   );
 };

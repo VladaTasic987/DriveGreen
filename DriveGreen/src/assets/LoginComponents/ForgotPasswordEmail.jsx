@@ -1,7 +1,10 @@
 import arrowBack from '../Images/ArrowBack.png';
 import { Link } from 'react-router-dom';
+import { useUser } from '../Context';
 
 export function ForgotPasswordEmail() {
+
+    const { visible, toggleVisible, email, password, getEmail, getPassword, existingEmail, existingPassword } = useUser();
     return (
         <div id="forgot-password-container">
 
