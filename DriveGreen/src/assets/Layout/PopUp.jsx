@@ -1,15 +1,17 @@
 import chargerSmall from "../Images/ChargerSmall.png"
 import wifiLogo from "../Images/WifiLogo.png"
 import { Link } from "react-router-dom";
+import {useUser} from "../Context.jsx";
 
 export function PopUp() {
 
+    const {partners} = useUser()
    
 
     return <div id="PopUp">
         <img className={'charger-img'} src={chargerSmall} alt="" />
         <div className="popUp-content">
-            <h2 className="popUp-title">Robert Bosch Charging</h2>
+            <h2 className="popUp-title">{partners.length ? partners[0].name : 'Robert Bosch'}</h2>
             <p className="popUp-address">Omladinskih brigada 90E,<br />Beograd 11070</p>
             <div className="popUp-info">
 
@@ -19,7 +21,7 @@ export function PopUp() {
             <div className="popUp-bottom">
                 <div className="power">
                     <span className="wifi-icon"><img src={wifiLogo} alt="wifilogo" /></span>
-                    <span>150 KW</span>
+                    <span>{partners.length ? partners[0].selectedOptions.Kw : '150'}</span>
                 </div>
                 <button className="popUp-btn">
                     <Link

@@ -79,16 +79,21 @@
     }
 
     .robert-bosch {
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: absolute;
         z-index: 3;
         top: 220px;
-        left: 110px;
+        left: 95px;
         font-family: Poppins;
         font-weight: 600;
         font-size: 14px;
         line-height: 100%;
         color: rgba(255, 200, 1, 1);
     }
+
 
     .charger-img {
         position: absolute;

@@ -5,11 +5,13 @@ import dottedLine from "../Images/DottedLine.png"
 import chargerLarge from "../Images/ChargerLarge.png"
 import mapBlur from "../Images/MapBlur.png"
 import { Link } from "react-router-dom"
+import {useUser} from "../Context.jsx";
 
 
 
 export function SuccessfulDestination() {
 
+    const {partners} = useUser()
 
     return (
 
@@ -42,7 +44,7 @@ export function SuccessfulDestination() {
 
                 <h3 className="station-text">Stanica</h3>
 
-                <h1 className="robert-bosch">Robert Bosch Charging</h1>
+                <h1 className="robert-bosch">{partners.length ? partners[0].name : "Robert Bosch Charging"}</h1>
 
                 <img 
                 className="charger-img"

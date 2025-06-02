@@ -150,6 +150,7 @@ import carLocation from "../Images/CarLocation.png";
 import locationSmall from "../Images/LocationSmall.png"; // Added missing import
 import { PopUp } from './PopUp';
 import {MapHeader} from "./MapHeader.jsx";
+import {useUser} from "../Context.jsx";
 
 export const MapBackground = forwardRef((props, ref) => {
   const mapRef = useRef();
@@ -166,6 +167,8 @@ export const MapBackground = forwardRef((props, ref) => {
 
   const [showPopup, setShowPopup] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
+
+  const {partners} = useUser()
 
   // Array of random image URLs
   const randomImages = [
@@ -423,7 +426,7 @@ export const MapBackground = forwardRef((props, ref) => {
         {showDetails ?
             <button className={'popup-button'} onClick={OnShowPopUp}>
             <span className={'charger-location-text'}>
-              <div className={'first'}> Robert Bosch</div>
+              <div className={'first'}> {partners.length ? partners[0].name : 'Robert Bosch'}</div>
               <div> <img src={locationSmall} alt="location" /> 2,5 km / 5 min</div>
             </span>
             </button> : null}

@@ -13,6 +13,7 @@ export const UserProvider = ({ children }) => {
     {id: 1, name: "Vladimir Tasic", email: "vlada@gmail.com", password: "12345678"},
     {id: 2, name: "Aleksandra Mircic", email: "aleksandra@gmail.com", password: "11223344"}
   ]);
+  const [partners, setPartners] = useState([]);
 
 
 
@@ -51,7 +52,9 @@ export const UserProvider = ({ children }) => {
   function registerUser() {
     setUsers([...users, {id: Date.now(), name: name, email: email, password: password}])
   }
-
+  function registerPartner() {
+    setPartners([...partners, {id: Date.now(), name: name, email: email, password: password, geoLocation: geoLocation, selectedOptions: selectedOptions}])
+  }
   function clearInputs() {
     setEmail("");
     setName("");
@@ -60,7 +63,7 @@ export const UserProvider = ({ children }) => {
   
 
   return (
-    <UserContext.Provider value={{ visible, toggleVisible, email, password, getEmail, getPassword, existingEmail, existingPassword, name, getName, registerUser, clearInputs, getGeoLocation, geoLocation, selectedOptions, setSelectedOptions }}>
+    <UserContext.Provider value={{ visible, toggleVisible, email, password, getEmail, getPassword, existingEmail, existingPassword, name, getName, registerUser, clearInputs, getGeoLocation, geoLocation, selectedOptions, setSelectedOptions, partners, registerPartner}}>
       {children}
     </UserContext.Provider>
   );

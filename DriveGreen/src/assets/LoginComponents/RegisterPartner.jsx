@@ -10,7 +10,7 @@ import passValidationGreen from "../Images/PasswordValidationGreenLine.png";
 
 export function RegisterPartner() {
 
-    const { visible, toggleVisible, email, password, getEmail, getPassword, name, getName, geoLocation, getGeoLocation, existingEmail, registerUser, clearInputs, selectedOptions, setSelectedOptions  } = useUser();
+    const { visible, toggleVisible, email, password, getEmail, getPassword, name, getName, geoLocation, getGeoLocation, existingEmail, clearInputs, selectedOptions, setSelectedOptions, registerPartner, partners  } = useUser();
 
     const [isChecked, setIsChecked] = useState(false);
 
@@ -169,9 +169,11 @@ export function RegisterPartner() {
                 to={canRegister ? "/mapStart" : null}
                 className={canRegister ? "link-to-map" : 'disabled-link-to-map'}
                 onClick={() => {if(canRegister){
-                    registerUser();
-                    clearInputs();
+                    registerPartner();
+
+                    console.log(partners);
                 }
+                    clearInputs();
                 }}
                 >
                     Registruj se
