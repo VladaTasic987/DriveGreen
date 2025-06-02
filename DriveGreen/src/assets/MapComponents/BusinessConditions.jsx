@@ -58,7 +58,9 @@ export function BusinessConditions() {
                 style={dragStyle}
             >
                 <h3>1. Opšte odredbe</h3>
-                <p>Ovi Opšti uslovi poslovanja (u daljem tekstu: Uslovi) regulišu korišćenje internet prodavnice [naziv sajta] kojom upravlja [pun naziv pravnog lica, adresa sedišta, PIB i matični broj], u daljem tekstu: Prodavac. <br /><br />
+                <p>Ovi Opšti uslovi poslovanja (u daljem tekstu: Uslovi) regulišu korišćenje internet prodavnice Drive Green kojom upravlja Drive Green doo, Milentija Popovića 85 Beograd,PIB 112233445, MB 55443322, u daljem tekstu: Prodavac.
+
+ <br /><br />
 
                     Kupac je svako fizičko ili pravno lice koje pristupi internet stranici i izvrši narudžbinu proizvoda ili usluga. <br />
                     Korišćenjem sajta i/ili kupovinom putem sajta, Kupac prihvata ove Uslove u celosti. Ukoliko se ne slažete sa uslovima, molimo vas da ne koristite sajt.</p>
@@ -75,30 +77,33 @@ export function BusinessConditions() {
                     elektronskim bankarstvom (e-banking), <br />
                     uplatom na račun.</p>
 
-                <h3>4. Isporuka</h3>
-                <p>Isporuka se vrši na teritoriji Republike Srbije putem kurirskih službi sa kojima Prodavac ima ugovor o saradnji. <br />
-                    Rok isporuke je od 1 do 5 radnih dana od potvrde narudžbine, osim u slučajevima vanrednih okolnosti (neradni dani, praznici, viša sila). <br />
-                    Troškove isporuke snosi Kupac, osim ako nije drugačije navedeno.</p>
+                    <p>Prodavac zadržava pravo izmene cena bez prethodne najave, ali se naručeni proizvodi obračunavaju po cenama koje su bile aktuelne u trenutku naručivanja.
+                    </p>
 
-                <h3>5. Pravo na odustanak i povraćaj robe</h3>
-                <p>Kupac koji je zaključio ugovor na daljinu ima pravo da odustane od ugovora bez navođenja razloga u roku od 14 dana od prijema robe. <br />
-                    Kupac je dužan da robu vrati u istom stanju u kojem ju je primio, neupotrebljavanu i u originalnom pakovanju. Trošak povraćaja robe snosi Kupac.</p>
+                    
 
                 <div className="scrollable-terms">
-                    <h3>6. Reklamacije i garancija</h3>
-                    <p>Kupac ima pravo na reklamaciju u skladu sa Zakonom o zaštiti potrošača.
-                        Reklamacije se podnose putem e-maila na adresu [email adresa] ili telefonom na broj [broj telefona].
-                        Kupac ima pravo na opravku, zamenu, sniženje cene ili raskid ugovora u slučaju nesaobraznosti robe.</p>
+                    <h3>4. Reklamacije i garancija</h3>
+                    <p>
+Kupac ima pravo na reklamaciju u skladu sa Zakonom o zaštiti potrošača.
+Reklamacije se podnose putem e-maila na adresu [email adresa] ili telefonom na broj [broj telefona].
+Kupac ima pravo na sniženje cene ili raskid ugovora u slučaju nesaobraznosti robe.
+</p>
 
-                    <h3>7. Zaštita podataka o ličnosti</h3>
+                    <h3>5. Zaštita podataka o ličnosti</h3>
                     <p>Prodavac se obavezuje da sve podatke o Kupcu koristi isključivo u svrhu realizacije narudžbine i u skladu sa Zakonom o zaštiti podataka o ličnosti.
                         Podaci se neće ustupati trećim licima bez pristanka Kupca, osim ako to nije zakonska obaveza.</p>
 
-                    <h3>8. Izmene Uslova</h3>
+                         <h3>6. Odgovornost</h3>
+                <p>Prodavac ne snosi odgovornost za eventualne greške nastale usled tehničkih problema, prekida u radu sajta ili grešaka u prikazu informacija (npr. cena, dostupnost).
+</p>
+
+
+                    <h3>7. Izmene uslova</h3>
                     <p>Prodavac zadržava pravo da u bilo kom trenutku izmeni ove Uslove. Sve izmene stupaju na snagu od dana objavljivanja na sajtu.
                     </p>
 
-                    <h3>9. Rešavanje sporova</h3>
+                    <h3>8. Rešavanje sporova</h3>
                     <p>Svi sporovi između Prodavca i Kupca rešavaju se mirnim putem, a ukoliko to nije moguće, nadležan je stvarno nadležni sud u mestu sedišta Prodavca.
                     </p>
                 </div>
