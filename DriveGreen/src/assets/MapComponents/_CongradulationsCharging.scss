@@ -78,10 +78,13 @@
     }
 
     .robert-bosch {
+        width: 200px;
+        display: flex;
+        justify-content: center;
         position: absolute;
         z-index: 2;
         top: 220px;
-        left: 115px;
+        left: 95px;
         font-family: Poppins;
         font-weight: 600;
         font-size: 14px;

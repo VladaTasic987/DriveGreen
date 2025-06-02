@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
 import MapBackground from "../Layout/MapBackground";
 import { SuccessfulDestination } from "./SuccessfulDestination";
+import {useUser} from "../Context.jsx";
 
 
 
@@ -14,6 +15,8 @@ export function ReservedCharger() {
     const [visible, setVisible] = useState(true);
 
     const [showCard, setShowCard] = useState(false);
+
+    const {partners} = useUser()
 
     function showCardAfterSeconds() {
         setShowCard(false);
@@ -31,7 +34,20 @@ export function ReservedCharger() {
             console.warn("MapBackground nije učitan ili mapRef nije postavljen.");
         }
         setVisible(newVisible => !newVisible)
-    };
+    }
+
+    function countPrice() {
+        const free = 'Besplatno';
+        const finalePrice = 90 *  partners[0].selectedOptions.Naplata;
+         if(finalePrice === 0){
+           return free;
+        }else
+         {
+             return finalePrice;
+         }
+
+    }
+
 
     return (
         !showCard ? (
@@ -51,7 +67,7 @@ export function ReservedCharger() {
                     <div className="middle-div">
                         <div className="middle-first">
                             <h1>Stanica</h1>
-                            <p>Robert Bosch Charging</p>
+                            <p>{partners.length ? partners[0].name : "Robert Bosch Charging"}</p>
                         </div>
 
                         <div className="middle-second">
@@ -66,7 +82,7 @@ export function ReservedCharger() {
 
                         <div className="middle-fourth">
                             <h1>Ukupno</h1>
-                            <p>Besplatno</p>
+                            <p>{partners.length ? countPrice() : 'Besplatno'}</p>
                         </div>
                     </div>
 

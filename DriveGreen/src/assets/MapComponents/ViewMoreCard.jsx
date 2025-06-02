@@ -6,8 +6,12 @@ import ChargerLarge from "../Images/ChargerLarge.png"
 import HeartIcon from "../Images/HeartIcon.png"
 import StationRating from "../Images/StationRating.png"
 import ArrivalDepartureArrow from "../Images/ArrivalDepartureArrow.png"
+import {useUser} from "../Context.jsx";
 
 export function ViewMoreCard() {
+
+    const {partners} = useUser();
+
     return (
         <div id="container">
             <MapHeader />
@@ -27,7 +31,7 @@ export function ViewMoreCard() {
 
             <div className="station-info">
                 <div className="station-header">
-                    <h3>Robert Bosch Charging</h3>
+                    <h3>{!partners.length ?  'Robert Bocsh Charging' : partners[0].name}</h3>
                     <img src={HeartIcon} alt="heart icon" />
                 </div>
 
@@ -43,10 +47,10 @@ export function ViewMoreCard() {
             <div className="station-options">
                 <div className="option-box">
                     <span className="option-title-one">Tip 3</span>
-                    <span className="option-sub">150 KW</span>
+                    <span className="option-sub">{partners.length ? partners[0].selectedOptions.Kw : '150'}KW</span>
                 </div>
                 <div className="option-box">
-                    <span className="option-title">Besplatno</span>
+                    <span className="option-title">{partners.length ? partners[0].selectedOptions.Naplata+"RSD" : 'Besplatno'}</span>
                     <span className="option-sub">minut</span>
                 </div>
                 <div className="option-box">
