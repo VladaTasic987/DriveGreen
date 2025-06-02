@@ -12,7 +12,7 @@
 
   .register-header {
     position: absolute;
-    top: 65px;
+    top: 45px;
     left: 21px;
   }
 
@@ -168,6 +168,50 @@
     line-height: 100%;
     padding-left: 9px;
   }
+
+
+  .password-input--check {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 24px;
+  }
+
+  .password-input--check label {
+    font-family: Plus Jakarta Sans;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: #2c2c2c;
+  }
+
+  .password-input--check input {
+    width: 342px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    margin-top: 12px;
+    font-family: Plus Jakarta Sans;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 100%;
+    padding-left: 10px;
+  }
+
+  .password-input--check input::placeholder {
+    font-family: Plus Jakarta Sans;
+    font-weight: 600;
+    font-size: 16px;
+    color: #2c2c2c;
+    line-height: 100%;
+    padding-left: 9px;
+  }
+
+
   .location-input {
     width: 100%;
     display: flex;
@@ -206,15 +250,23 @@
     line-height: 100%;
     padding-left: 9px;
   }
+
   input:hover {
     border-radius: 8px;
     border: 1px solid #00aef7;
     background-color: rgba(0, 174, 247, 0.2);
   }
+
   .not-vision {
     position: absolute;
     right: 40px;
-    bottom: 427px;
+    bottom: 435px;
+  }
+
+  .not-vision--check{
+    position: absolute;
+    right: 40px;
+    bottom: 447px;
   }
 
   button {
@@ -230,9 +282,11 @@
     color: #ffffff;
     cursor: pointer;
   }
+
   .link-to-map:hover {
     background-color: rgba(255, 219, 99, 0.6);
   }
+
   .link-to-map:active {
     background-color: rgba(246, 192, 13, 1);
   }
@@ -253,8 +307,28 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 100%;
+    margin-top: 15px;
     color: #ffffff;
     cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .disabled-link-to-map {
+    height: 48px;
+    width: 342px;
+    border-radius: 8px;
+    background-color: rgba(255, 219, 99, 0.6);
+    border: none;
+    font-family: Plus Jakarta Sans;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: #ffffff;
+    cursor: pointer;
+    margin-top: 15px;
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -271,10 +345,12 @@
     margin-top: 10px;
 
   }
+
   h4 a {
     color: #5ed48c;
     text-decoration: none;
   }
+
   .login-google {
     display: flex;
     justify-content: center;
@@ -292,15 +368,18 @@
     color: #4280ef;
     cursor: pointer;
   }
-  .login-google:hover{
+
+  .login-google:hover {
     box-shadow: 0px 0px 0px 3px rgba(66, 128, 239, 0.70);
-    -webkit-box-shadow: 0px 0px 0px 3px rgba(66, 128, 239,0.70);
-    -moz-box-shadow: 0px 0px 0px 3px rgba(66, 128, 239,0.70);
+    -webkit-box-shadow: 0px 0px 0px 3px rgba(66, 128, 239, 0.70);
+    -moz-box-shadow: 0px 0px 0px 3px rgba(66, 128, 239, 0.70);
   }
-  .login-google:active{
+
+  .login-google:active {
     background-color: rgba(66, 128, 239, 0.25);
   }
-//
+
+  //
   .link-to-registerPartner-button:hover {
     background-color: rgba(255, 219, 99, 0.6);
   }
@@ -308,8 +387,8 @@
   .link-to-registerPartner-button:active {
     background-color: rgba(246, 192, 13, 1);
   }
-  //
 
+  //
 
 
   .checkbox-span {
@@ -324,6 +403,7 @@
 
 
   }
+
   .checkbox-input {
     width: 100%;
     display: flex;
@@ -354,11 +434,13 @@
     font-weight: 500;
     font-size: 12px;
   }
+
   .dropdown-list label {
     font-family: Plus Jakarta Sans;
     font-weight: 600;
     font-size: 12px;
   }
+
   .dropdown-list select option {
     font-family: Plus Jakarta Sans;
     font-weight: 500;
@@ -366,15 +448,95 @@
     color: #2C2C2C99;
 
   }
+
   #Punjači {
     width: 110px;
   }
+
   #Naplata {
     width: 141px;
   }
+
   #Kw {
     width: 49px;
   }
 
+  //css za proveru pass i email
 
+  .existing-account {
+    font-family: Plus Jakarta Sans;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: rgba(209, 48, 48, 1);
+    position: absolute;
+    top: 335px;
+    left: 25px;
+  }
+
+  .existing-account--check {
+    font-family: Plus Jakarta Sans;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: rgba(209, 48, 48, 1);
+    position: absolute;
+    top: 325px;
+    left: 25px;
+  }
+
+  .pass-validation-container {
+    width: 309px;
+    height: 36px;
+    position: absolute;
+    top: 419px;
+    left: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+
+
+    .red-line {
+      height: 3px;
+      width: 342px;
+      border-radius: 50px;
+    }
+
+    .pass-val-text {
+      font-family: Plus Jakarta Sans;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 100%;
+      color: rgba(209, 48, 48, 1);
+
+    }
+  }
+
+  #pas-container-green {
+    width: 309px;
+    height: 36px;
+    position: absolute;
+    top: 419px;
+    left: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+
+    .green-line {
+      height: 3px;
+      width: 342px;
+      border-radius: 50px;
+    }
+
+    .green-text {
+      font-family: Plus Jakarta Sans;
+      font-weight: 600;
+      font-size: 14px;
+      color: rgba(52, 163, 83, 1);
+    }
+
+
+  }
 }

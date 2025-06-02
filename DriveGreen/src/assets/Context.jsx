@@ -7,12 +7,15 @@ export const UserProvider = ({ children }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [geoLocation, setGeoLocation] = useState("");
+  const [selectedOptions, setSelectedOptions] = useState({Punjaci: '', Kw: '', Naplata: ''});
   const [users, setUsers] = useState([
     {id: 1, name: "Vladimir Tasic", email: "vlada@gmail.com", password: "12345678"},
     {id: 2, name: "Aleksandra Mircic", email: "aleksandra@gmail.com", password: "11223344"}
   ]);
 
-  
+
+
   function toggleVisible() {
     setVisible(Toggle => !Toggle);
   }
@@ -29,6 +32,9 @@ export const UserProvider = ({ children }) => {
   function getName(e) {
     setName(e.target.value)
   }
+  function getGeoLocation(e) {
+    setGeoLocation(e.target.value)
+  }
 
   const existingEmail = users.some((user) => {
     return email === user.email
@@ -39,7 +45,7 @@ export const UserProvider = ({ children }) => {
     if(user && user.password === password) {
     return true
     }     
-    else return false    
+    else return false
 }
       
   function registerUser() {
@@ -54,7 +60,7 @@ export const UserProvider = ({ children }) => {
   
 
   return (
-    <UserContext.Provider value={{ visible, toggleVisible, email, password, getEmail, getPassword, existingEmail, existingPassword, name, getName, registerUser, clearInputs }}>
+    <UserContext.Provider value={{ visible, toggleVisible, email, password, getEmail, getPassword, existingEmail, existingPassword, name, getName, registerUser, clearInputs, getGeoLocation, geoLocation, selectedOptions, setSelectedOptions }}>
       {children}
     </UserContext.Provider>
   );
