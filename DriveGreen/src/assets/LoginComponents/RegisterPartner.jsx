@@ -4,10 +4,37 @@ import {Link} from "react-router-dom";
 import {useUser} from "../Context.jsx";
 import notVision from "../Images/NotVision.png";
 import vision from "../Images/Vision.png";
+import {useState} from "react";
+import passValidationRed from "../Images/PasswordValidationRedLine.png";
+import passValidationGreen from "../Images/PasswordValidationGreenLine.png";
 
 export function RegisterPartner() {
 
-    const { visible, toggleVisible } = useUser();
+    const { visible, toggleVisible, email, password, getEmail, getPassword, name, getName, geoLocation, getGeoLocation, existingEmail, registerUser, clearInputs, selectedOptions, setSelectedOptions  } = useUser();
+
+    const [isChecked, setIsChecked] = useState(false);
+
+    const passwordRegex = /^(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+    const handleCheckboxChange = () => {
+        setIsChecked( prevState=> !prevState);
+    }
+    const handleChangeOptions = (name, value) => {
+        setSelectedOptions(prev => ({ ...prev, [name]: value }));
+    };
+
+
+    const canRegister =
+        password.length >= 8 &&
+        passwordRegex.test(password) &&
+        emailRegex.test(email) &&
+        !existingEmail &&
+        isChecked &&
+        !Object.values(selectedOptions).every(value => value === '') &&
+        name.length > 5
+    ;
 
     return (
 
@@ -30,6 +57,8 @@ export function RegisterPartner() {
                     Vaše ime / ime Kompanije
                     <br />
                     <input
+                        onChange={(e) => getName(e)}
+                        value={name}
                         type="text"
                         placeholder='Upišite Vaše ime ili ime Kompanije...'
                     />
@@ -41,29 +70,33 @@ export function RegisterPartner() {
                     Email
                     <br />
                     <input
+                        onChange={(e) => getEmail(e)}
+                        value={email}
                         type="text"
                         placeholder='Upišite Vaš email...'
                     />
                 </label>
             </div>
 
-            <div className='password-input'>
+            <div className={password ? 'password-input--check' : 'password-input'}>
                 <label htmlFor="">
                     Lozinka
                     <br/>
                     <input
+                        onChange={(e) => getPassword(e)}
+                        value={password}
                         type={visible ? "text" : "password"}
                         placeholder='Upisite Vasu lozinku...'
                     />
                 {!visible ? <img
                         onClick={toggleVisible}
-                        className='not-vision'
+                        className={password ? 'not-vision--check' : 'not-vision'}
                         src={notVision}
                         alt="eye" />
                     :
                     <img
                         onClick={toggleVisible}
-                        className='not-vision'
+                        className={password ? 'not-vision--check' : 'not-vision'}
                         src={vision}
                         alt="eye" />}
 
@@ -74,6 +107,8 @@ export function RegisterPartner() {
                     Geolokacija
                     <br />
                     <input
+                        onChange={(e) => getGeoLocation(e)}
+                        value={geoLocation}
                         type="text"
                         placeholder='Upišite Vašu tačnu geolokaciju'
                     />
@@ -85,10 +120,11 @@ export function RegisterPartner() {
                 <label htmlFor="">
                     Količina punjača 
                     <br />
-                    <select name="Punjači" id="Punjači">
+                    <select onChange={(e) => handleChangeOptions('Punjaci', e.target.value)} value={selectedOptions.Punjaci} id="Punjači">
+                        <option value="">Izaberite</option>
                         <option value="1 punjač">1 punjač</option>
-                        <option value="2 punjač">2 punjač</option>
-                        <option value="3 punjač">3 punjač</option>
+                        <option value="2 punjača">2 punjač</option>
+                        <option value="3 punjača">3 punjač</option>
                     </select>
                 </label>
 
@@ -96,7 +132,8 @@ export function RegisterPartner() {
                 <label htmlFor="">
                     KW
                     <br />
-                    <select name="Kw" id="Kw">
+                    <select onChange={(e) => handleChangeOptions('Kw', e.target.value)} value={selectedOptions.Kw} id="Kw">
+                        <option value="">Izaberite</option>
                         <option value="11">11</option>
                         <option value="22">22</option>
                         <option value="150">150</option>
@@ -107,7 +144,9 @@ export function RegisterPartner() {
                 <label htmlFor="">
                     Način naplate
                     <br />
-                    <select name="Naplata" id="Naplata">
+                    <select onChange={(e) => handleChangeOptions('Naplata', e.target.value)} value={selectedOptions.Naplata} id="Naplata">
+                        <option value="">Izaberite</option>
+
                         <option value="0">Besplatno</option>
                         <option value="100">100 rsd/min</option>
                         <option value="120">120 rsd/min</option>
@@ -118,14 +157,25 @@ export function RegisterPartner() {
             </div>
 
             <div className={'checkbox-input'}>
-                <input type="checkbox" id="" />
+                <input type="checkbox" id=""
+                       checked={isChecked}
+                       onChange={handleCheckboxChange}
+                />
                 <span className={'checkbox-span'}>  &nbsp;Saglasan sam sa kupovinom i opštim uslovima poslovanja</span>
             </div>
 
                 {/*<button className={'login-button'}>*/}
                 <Link
-                to="/mapStart"
-                className="link-to-map">Registruj se</Link>
+                to={canRegister ? "/mapStart" : null}
+                className={canRegister ? "link-to-map" : 'disabled-link-to-map'}
+                onClick={() => {if(canRegister){
+                    registerUser();
+                    clearInputs();
+                }
+                }}
+                >
+                    Registruj se
+                </Link>
                 {/*</button>*/}
                     <h4>Postojeći korisnik? &nbsp;
                         <Link
@@ -137,6 +187,26 @@ export function RegisterPartner() {
                 <img src={googleIcon} alt="googleIcon" />
                 Koristi Google nalog
             </button>
+
+            {/*provera lozinke i email-a*/}
+            {existingEmail ?<p className={password ? 'existing-account--check' : 'existing-account' }>Postojeci nalog. Ulogujte se</p> : null}
+
+
+            {password && !passwordRegex.test(password) ? (
+                <div className='pass-validation-container'>
+                    <img
+                        className='red-line'
+                        src={passValidationRed} alt="pass-val" />
+                    <p className='pass-val-text'>Lozinka je preslaba. Koristite 8 karaktera, jedno veliko slovo i jedan specijalan karakter</p>
+                </div>
+            ) : passwordRegex.test(password) ? (
+                <div id='pas-container-green'>
+                    <img
+                        className='green-line'
+                        src={passValidationGreen} alt="green-line" />
+                    <p className='green-text'>Jaka lozinka</p>
+                </div>
+            ) : null}
 
 
 
