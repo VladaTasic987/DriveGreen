@@ -19,10 +19,7 @@ export const UserProvider = ({ children }) => {
   const [passwordPartner, setPasswordPartner] = useState("");
   const [geoLocation, setGeoLocation] = useState("");
   const [selectedOptions, setSelectedOptions] = useState({Punjaci: '1 punjac', Kw: '11', Naplata: 'Besplatno'});
-  const [partners, setPartners] = useState([
-    {id: Date.now(), name: "Tesla Motors", email: "tesla@gmail.com", password: "11111111",
-      geoLocation: "21,22/22,22", selectedOptions: selectedOptions}
-  ]);
+  const [partners, setPartners] = useState([]);
 
 
   function toggleVisible() {

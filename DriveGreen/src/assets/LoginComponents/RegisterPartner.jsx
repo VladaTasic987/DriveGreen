@@ -12,7 +12,7 @@ export function RegisterPartner() {
 
     const { visible, toggleVisible, emailPartner, passwordPartner, getEmailPartner, getPasswordPartner, namePartner, getNamePartner,
         geoLocation, getGeoLocation, existingEmail, clearInputsPartner,
-        selectedOptions, setSelectedOptions, registerPartner, partners, user  } = useUser();
+        selectedOptions, setSelectedOptions, registerPartner, partners, } = useUser();
 
     const [isChecked, setIsChecked] = useState(false);
 
