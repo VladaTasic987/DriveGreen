@@ -13,6 +13,7 @@ import { SuccessfulDestination } from './MapComponents/SuccessfulDestination';
 import { ChargingProgress } from './MapComponents/ChargingProgress';
 import { CongradulationsCharging } from './MapComponents/CongradulationsCharging';
 import { BusinessConditions } from './MapComponents/BusinessConditions';
+import { MapPinsLegend } from './MapComponents/MapPinsLegend';
 
 export function AppRoutes() {
   return (
@@ -30,6 +31,7 @@ export function AppRoutes() {
       <Route path="/chargingProgress" element={<ChargingProgress />} />
       <Route path="/congradulationsCharging" element={<CongradulationsCharging />} />
       <Route path="/businessConditions" element={<BusinessConditions />} />
+      <Route path="/pinsLegend" element={<MapPinsLegend />} />
     </Routes>
   );
 };

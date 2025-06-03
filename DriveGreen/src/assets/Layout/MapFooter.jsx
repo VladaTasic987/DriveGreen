@@ -17,22 +17,25 @@ export function MapFooter() {
         manual: "Uputstvo za koriscenje",
     }
 
-        const location = useLocation();
-  
-            
+    const location = useLocation();
+
+
     return (
         <div id="map-footer">
-            
+
             <div className="footer-left">
-                <img 
-                className="thunder-img"
-                src={footerElements.thunderIcon} 
-                alt="thunder" />
+                <img
+                    className="thunder-img"
+                    src={footerElements.thunderIcon}
+                    alt="thunder" />
 
                 <div className="pin-legend">
                     <p className="pin-paragraph">{location.pathname === '/mapStart' ? footerElements.pinText : footerElements.malfunction}</p>
                     <div className="footer-text">
-                        <h4 className="click-more">{footerElements.clickForMore}</h4>
+                        <Link
+                            className="click-more"
+                            to="/pinsLegend"
+                        >{footerElements.clickForMore}</Link>
                         {/*<img */}
                         {/*className="arrow-img"*/}
                         {/*src={footerElements.arrowRight} */}
@@ -42,11 +45,11 @@ export function MapFooter() {
             </div>
 
             <div className="footer-right">
-                <h4 className="condition-text">{location.pathname === '/mapStart' ?footerElements.conditionText : footerElements.manual}</h4>
+                <h4 className="condition-text">{location.pathname === '/mapStart' ? footerElements.conditionText : footerElements.manual}</h4>
                 <div className="right-content">
-                    <Link 
-                    className="paragraph-left"
-                    to="/businessConditions"
+                    <Link
+                        className="paragraph-left"
+                        to="/businessConditions"
                     >{footerElements.clickLeft}</Link>
                     {/*<img */}
                     {/*className="arrow-img"*/}
