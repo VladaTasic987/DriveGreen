@@ -7,14 +7,22 @@ export const UserProvider = ({ children }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [geoLocation, setGeoLocation] = useState("");
-  const [selectedOptions, setSelectedOptions] = useState({Punjaci: '', Kw: '', Naplata: ''});
   const [users, setUsers] = useState([
     {id: 1, name: "Vladimir Tasic", email: "vlada@gmail.com", password: "12345678"},
     {id: 2, name: "Aleksandra Mircic", email: "aleksandra@gmail.com", password: "11223344"}
   ]);
-  const [partners, setPartners] = useState([]);
 
+
+
+  const [namePartner, setNamePartner] = useState("");
+  const [emailPartner, setEmailPartner] = useState("");
+  const [passwordPartner, setPasswordPartner] = useState("");
+  const [geoLocation, setGeoLocation] = useState("");
+  const [selectedOptions, setSelectedOptions] = useState({Punjaci: '1 punjac', Kw: '11', Naplata: 'Besplatno'});
+  const [partners, setPartners] = useState([
+    {id: Date.now(), name: "Tesla Motors", email: "tesla@gmail.com", password: "11111111",
+      geoLocation: "21,22/22,22", selectedOptions: selectedOptions}
+  ]);
 
 
   function toggleVisible() {
@@ -33,9 +41,6 @@ export const UserProvider = ({ children }) => {
   function getName(e) {
     setName(e.target.value)
   }
-  function getGeoLocation(e) {
-    setGeoLocation(e.target.value)
-  }
 
   const existingEmail = users.some((user) => {
     return email === user.email
@@ -52,18 +57,48 @@ export const UserProvider = ({ children }) => {
   function registerUser() {
     setUsers([...users, {id: Date.now(), name: name, email: email, password: password}])
   }
-  function registerPartner() {
-    setPartners([...partners, {id: Date.now(), name: name, email: email, password: password, geoLocation: geoLocation, selectedOptions: selectedOptions}])
-  }
   function clearInputs() {
     setEmail("");
     setName("");
     setPassword("");
   }
-  
+
+  //Deo logike za Partnera
+
+  function registerPartner() {
+    setPartners([...partners, {id: Date.now(), name: namePartner, email: emailPartner, password: passwordPartner,
+      geoLocation: geoLocation, selectedOptions: selectedOptions}])
+  }
+
+  function getEmailPartner(e) {
+    setEmailPartner("");
+    setEmailPartner(e.target.value)
+  }
+
+  function getPasswordPartner(e) {
+    setPasswordPartner(e.target.value)
+  }
+
+  function getNamePartner(e) {
+    setNamePartner(e.target.value)
+  }
+  function getGeoLocation(e) {
+    setGeoLocation(e.target.value)
+  }
+  function clearInputsPartner() {
+    setEmailPartner("");
+    setNamePartner("");
+    setPasswordPartner("");
+    setGeoLocation("");
+  }
+
+
+
 
   return (
-    <UserContext.Provider value={{ visible, toggleVisible, email, password, getEmail, getPassword, existingEmail, existingPassword, name, getName, registerUser, clearInputs, getGeoLocation, geoLocation, selectedOptions, setSelectedOptions, partners, registerPartner}}>
+    <UserContext.Provider value={{ visible, toggleVisible, email, password, getEmail, getPassword, existingEmail, existingPassword, name, getName, registerUser, clearInputs,
+      getGeoLocation, geoLocation, selectedOptions, setSelectedOptions, partners, registerPartner, namePartner, getNamePartner, emailPartner, getEmailPartner,
+      passwordPartner, getPasswordPartner, clearInputsPartner}}>
       {children}
     </UserContext.Provider>
   );

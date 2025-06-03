@@ -6,8 +6,10 @@
   width: 375px;
   height: 147px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  position: relative;
-  top: -400px;
+  border: 0.2px solid;
+  position: absolute;
+  top: 290px;
+  left: 7.5px;
 
   .charger-img {
     margin: 10px;
@@ -15,9 +17,6 @@
     height: 95px;
   }
 
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  position: absolute;
-  top: 290px;
 
   .charger-img {
     margin: 10px;
@@ -30,15 +29,17 @@
   }
 
   .popUp-title {
+    font-family: Poppins;
     margin-top: 10px;
-    color: #ffdb63;
+    color: #FFC801;
     font-weight: 600;
     font-size: 14px;
   }
 
   .popUp-address {
+    font-family: Poppins;
     margin-top: 10px;
-    color: #333;
+    color: #000;
     font-weight: 400;
     font-size: 12px;
   }
@@ -48,7 +49,7 @@
     width: 70px;
     display: flex;
     //clear: both;
-    color: #ffdb63;
+    color: #FFC801;
     font-weight: 400;
     font-size: 10px;
     justify-items: end;
@@ -58,9 +59,20 @@
     align-items: flex-end;
   }
 
+  .distance{
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    padding-bottom: 2px;
+
+  }
   .stars {
-    color: #ffdb63;
+    color: #FFC801;
     font-size: 12px;
+
+    margin-bottom: 2px;
   }
 
   .popUp-bottom {
@@ -76,7 +88,25 @@
     font-weight: 400;
     font-size: 12px;
   }
+  .power-kw {
+    font-family: Poppins;
+    color: #000;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    margin-left: 10px;
 
+  }
+  .popUp-heart{
+    position: absolute;
+    top: 13px;
+    right: 20px;
+    width: 17.995990753173828px;
+    height: 16.360000610351562px;
+    border-width: 1.8px;
+
+  }
   .wifi-icon {
     font-size: 12px;
   }

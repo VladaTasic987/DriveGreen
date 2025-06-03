@@ -10,7 +10,9 @@ import passValidationGreen from "../Images/PasswordValidationGreenLine.png";
 
 export function RegisterPartner() {
 
-    const { visible, toggleVisible, email, password, getEmail, getPassword, name, getName, geoLocation, getGeoLocation, existingEmail, clearInputs, selectedOptions, setSelectedOptions, registerPartner, partners  } = useUser();
+    const { visible, toggleVisible, emailPartner, passwordPartner, getEmailPartner, getPasswordPartner, namePartner, getNamePartner,
+        geoLocation, getGeoLocation, existingEmail, clearInputsPartner,
+        selectedOptions, setSelectedOptions, registerPartner, partners, user  } = useUser();
 
     const [isChecked, setIsChecked] = useState(false);
 
@@ -27,13 +29,13 @@ export function RegisterPartner() {
 
 
     const canRegister =
-        password.length >= 8 &&
-        passwordRegex.test(password) &&
-        emailRegex.test(email) &&
+        passwordPartner.length >= 8 &&
+        passwordRegex.test(passwordPartner) &&
+        emailRegex.test(emailPartner) &&
         !existingEmail &&
         isChecked &&
         !Object.values(selectedOptions).every(value => value === '') &&
-        name.length > 5
+        namePartner.length > 5
     ;
 
     return (
@@ -57,8 +59,8 @@ export function RegisterPartner() {
                     Vaše ime / ime Kompanije
                     <br />
                     <input
-                        onChange={(e) => getName(e)}
-                        value={name}
+                        onChange={(e) => getNamePartner(e)}
+                        value={namePartner}
                         type="text"
                         placeholder='Upišite Vaše ime ili ime Kompanije...'
                     />
@@ -70,33 +72,33 @@ export function RegisterPartner() {
                     Email
                     <br />
                     <input
-                        onChange={(e) => getEmail(e)}
-                        value={email}
+                        onChange={(e) => getEmailPartner(e)}
+                        value={emailPartner}
                         type="text"
                         placeholder='Upišite Vaš email...'
                     />
                 </label>
             </div>
 
-            <div className={password ? 'password-input--check' : 'password-input'}>
+            <div className={passwordPartner ? 'password-input--check' : 'password-input'}>
                 <label htmlFor="">
                     Lozinka
                     <br/>
                     <input
-                        onChange={(e) => getPassword(e)}
-                        value={password}
+                        onChange={(e) => getPasswordPartner(e)}
+                        value={passwordPartner}
                         type={visible ? "text" : "password"}
                         placeholder='Upisite Vasu lozinku...'
                     />
                 {!visible ? <img
                         onClick={toggleVisible}
-                        className={password ? 'not-vision--check' : 'not-vision'}
+                        className={passwordPartner ? 'not-vision--check' : 'not-vision'}
                         src={notVision}
                         alt="eye" />
                     :
                     <img
                         onClick={toggleVisible}
-                        className={password ? 'not-vision--check' : 'not-vision'}
+                        className={passwordPartner ? 'not-vision--check' : 'not-vision'}
                         src={vision}
                         alt="eye" />}
 
@@ -121,7 +123,7 @@ export function RegisterPartner() {
                     Količina punjača 
                     <br />
                     <select onChange={(e) => handleChangeOptions('Punjaci', e.target.value)} value={selectedOptions.Punjaci} id="Punjači">
-                        <option value="">Izaberite</option>
+
                         <option value="1 punjač">1 punjač</option>
                         <option value="2 punjača">2 punjač</option>
                         <option value="3 punjača">3 punjač</option>
@@ -133,7 +135,7 @@ export function RegisterPartner() {
                     KW
                     <br />
                     <select onChange={(e) => handleChangeOptions('Kw', e.target.value)} value={selectedOptions.Kw} id="Kw">
-                        <option value="">Izaberite</option>
+
                         <option value="11">11</option>
                         <option value="22">22</option>
                         <option value="150">150</option>
@@ -145,8 +147,6 @@ export function RegisterPartner() {
                     Način naplate
                     <br />
                     <select onChange={(e) => handleChangeOptions('Naplata', e.target.value)} value={selectedOptions.Naplata} id="Naplata">
-                        <option value="">Izaberite</option>
-
                         <option value="0">Besplatno</option>
                         <option value="100">100 rsd/min</option>
                         <option value="120">120 rsd/min</option>
@@ -171,9 +171,8 @@ export function RegisterPartner() {
                 onClick={() => {if(canRegister){
                     registerPartner();
 
-                    console.log(partners);
                 }
-                    clearInputs();
+                    clearInputsPartner();
                 }}
                 >
                     Registruj se
@@ -191,17 +190,17 @@ export function RegisterPartner() {
             </button>
 
             {/*provera lozinke i email-a*/}
-            {existingEmail ?<p className={password ? 'existing-account--check' : 'existing-account' }>Postojeci nalog. Ulogujte se</p> : null}
+            {existingEmail ?<p className={passwordPartner ? 'existing-account--check' : 'existing-account' }>Postojeci nalog. Ulogujte se</p> : null}
 
 
-            {password && !passwordRegex.test(password) ? (
+            {passwordPartner && !passwordRegex.test(passwordPartner) ? (
                 <div className='pass-validation-container'>
                     <img
                         className='red-line'
                         src={passValidationRed} alt="pass-val" />
                     <p className='pass-val-text'>Lozinka je preslaba. Koristite 8 karaktera, jedno veliko slovo i jedan specijalan karakter</p>
                 </div>
-            ) : passwordRegex.test(password) ? (
+            ) : passwordRegex.test(passwordPartner) ? (
                 <div id='pas-container-green'>
                     <img
                         className='green-line'

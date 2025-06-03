@@ -82,7 +82,7 @@ export function ReservedCharger() {
 
                         <div className="middle-fourth">
                             <h1>Ukupno</h1>
-                            <p>{partners.length ? countPrice() : 'Besplatno'}</p>
+                            <p>{partners.length ? countPrice()+" RSD" : 'Besplatno'}</p>
                         </div>
                     </div>
 
