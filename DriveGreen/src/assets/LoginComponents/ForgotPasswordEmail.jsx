@@ -4,7 +4,7 @@ import { useUser } from '../Context';
 
 export function ForgotPasswordEmail() {
 
-    const {  email, getEmail, users, existingEmail} = useUser();
+    const {  email, getEmail, existingEmail, clearInputs} = useUser();
     return (
         <div id="forgot-password-container">
 
@@ -39,7 +39,9 @@ export function ForgotPasswordEmail() {
 
             <Link
                 className={ existingEmail ? "send-code" : "send-code-disabled"}
-                to={existingEmail ? "/passwordCode" : ""}>
+                to={existingEmail ? "/passwordCode" : ""}
+                onClick={clearInputs}
+                >
                 Pošalji kod
             </Link>
         </div>
