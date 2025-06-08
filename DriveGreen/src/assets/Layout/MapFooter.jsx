@@ -30,7 +30,7 @@ export function MapFooter() {
                     alt="thunder" />
 
                 <div className="pin-legend">
-                    <p className="pin-paragraph">{location.pathname === '/mapStart' ? footerElements.pinText : footerElements.malfunction}</p>
+                    <p className="pin-paragraph">{footerElements.pinText}</p>
                     <div className="footer-text">
                         <Link
                             className="click-more"
@@ -45,7 +45,7 @@ export function MapFooter() {
             </div>
 
             <div className="footer-right">
-                <h4 className="condition-text">{location.pathname === '/mapStart' ? footerElements.conditionText : footerElements.manual}</h4>
+                <h4 className="condition-text">{footerElements.conditionText}</h4>
                 <div className="right-content">
                     <Link
                         className="paragraph-left"

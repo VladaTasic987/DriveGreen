@@ -54,14 +54,14 @@ export function ChargingProgress() {
             <div className="charging-card">
 
                 <h4>Punjenje u toku</h4>
-                <p>Vas auto ce uskoro biti spreman</p>
+                <p>Vaš auto ce uskoro biti spreman</p>
 
                 <img src={batteryImages[currentImageIndex]} alt="battone" />
 
                 <Link
                 to="/mapStart"
                 className="cancel-charging"
-                >OTKAZI PUNJENJE</Link>
+                >OTKAŽI PUNJENJE</Link>
 
             </div>
 

@@ -88,7 +88,7 @@ export function RegisterPartner() {
                         onChange={(e) => getPasswordPartner(e)}
                         value={passwordPartner}
                         type={visible ? "text" : "password"}
-                        placeholder='Upisite Vasu lozinku...'
+                        placeholder='Upišite Vašu lozinku...'
                     />
                 {!visible ? <img
                         onClick={toggleVisible}
@@ -122,7 +122,7 @@ export function RegisterPartner() {
                 <label htmlFor="">
                     Količina punjača 
                     <br />
-                    <select onChange={(e) => handleChangeOptions('Punjaci', e.target.value)} value={selectedOptions.Punjaci} id="Punjači">
+                    <select onChange={(e) => handleChangeOptions('Punjači', e.target.value)} value={selectedOptions.Punjaci} id="Punjači">
 
                         <option value="1 punjač">1 punjač</option>
                         <option value="2 punjača">2 punjač</option>

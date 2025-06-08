@@ -32,10 +32,10 @@ export function SuccessfulDestination() {
                 src={congradulationBackground} alt="background" />
 
                 <div className="text-container">
-                <h2 className="sucess-text">Uspesno ste stigli na destinaciju</h2>
+                <h2 className="sucess-text">Uspešno ste stigli na destinaciju</h2>
                 </div>
 
-                <p className="ready-text">Vas punjac je spreman</p>
+                <p className="ready-text">Vaš punjač je spreman</p>
 
                 <img 
                 className="dotted-line"
@@ -52,10 +52,10 @@ export function SuccessfulDestination() {
                 alt="charger" />
 
                 <Link
-                to="/chargingProgress" className="first-button">ZAPOCNI PUNJENJE</Link>
+                to="/chargingProgress" className="first-button">ZAPOČNI PUNJENJE</Link>
                 <Link 
                 to="/mapStart"
-                className="second-button">OTKAZI REZERVACIJU</Link>
+                className="second-button">OTKAŽI REZERVACIJU</Link>
 
             </div>
 

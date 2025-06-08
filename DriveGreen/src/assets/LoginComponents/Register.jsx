@@ -55,7 +55,7 @@ return (
             onChange={(e) => getName(e)}
             value={name}
             type="text"
-            placeholder='Upisite Vase ime i prezime...'
+            placeholder='Upišite Vase ime i prezime...'
             />
         </label>
     </div> 
@@ -68,7 +68,7 @@ return (
             value={email}
             onChange={(e) => getEmail(e)}
             type="text"
-            placeholder='Upisite Vas email...'
+            placeholder='Upišite Vaš email...'
             />
         </label>
     </div>
@@ -81,7 +81,7 @@ return (
             value={password}
             onChange={(e) => getPassword(e)}
             type={visible ? "text" : "password"}
-            placeholder='Upisite Vasu lozinku...'
+            placeholder='Upišite Vašu lozinku...'
             />
 
             
@@ -108,7 +108,7 @@ return (
             checked={isChecked}
             onChange={handleCheckboxChange}
             />
-    <p className='agree-text'>Saglasan sam sa politikom i opstim uslovima poslovanja</p>
+    <p className='agree-text'>Saglasan sam sa politikom i opštim uslovima poslovanja</p>
     </div>
 
 
@@ -141,7 +141,7 @@ return (
         </button>
         
     
-        {existingEmail ?<p className='existing-account'>Postojeci nalog. Ulogujte se</p> : null}
+        {existingEmail ?<p className='existing-account'>Postojeći nalog. Ulogujte se</p> : null}
 
 
         {password && !passwordRegex.test(password) ? (

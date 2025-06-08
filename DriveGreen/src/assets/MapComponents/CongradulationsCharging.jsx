@@ -32,10 +32,10 @@ export function CongradulationsCharging() {
                 src={congradulationBackground} alt="background" />
 
                 <div className="text-container">
-                <h2 className="sucess-text">Cestitamo</h2>
+                <h2 className="sucess-text">Čestitamo</h2>
                 </div>
 
-                <p className="ready-text">Punjenje je uspesno zavrseno</p>
+                <p className="ready-text">Punjenje je uspešno završeno</p>
 
                 <img 
                 className="dotted-line"
@@ -56,7 +56,7 @@ export function CongradulationsCharging() {
                  className="first-button">OCENI STANICU</Link>
                 <Link 
                 to="/mapStart"
-                className="second-button">IZADJI</Link>
+                className="second-button">IZAĐI</Link>
 
             </div>
 
