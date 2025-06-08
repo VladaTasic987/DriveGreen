@@ -20,7 +20,7 @@ export function Wellcome() {
                     Partner</Link>
             {/*</button>*/}
 
-            <h4>Postojeci nalog? &nbsp;
+            <h4>Postojeći nalog? &nbsp;
                 <Link
                     to="/login" className='link-to-login'
                 >Prijavi se!</Link>
